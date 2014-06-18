@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Windows.Forms;
 
 //@author xNovax
@@ -13,8 +12,10 @@ namespace Multi_Tool_V3
         }
 
         //Variables
-        UsefulCode uc = new UsefulCode();
+        private UsefulCode uc = new UsefulCode();
+
         private string time;
+
         private void Home_Load(object sender, EventArgs e)
         {
             time = uc.GetCurrentTime();
