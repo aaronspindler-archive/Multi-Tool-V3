@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Multi-Tool V3")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Compilation of small programs that I use on a daily basis. This program is also going to be the host for future testing endeavours.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("xNovax")]
 [assembly: AssemblyProduct("Multi-Tool V3")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("768d9836-65c3-40c0-a708-bc95d51151a6")]
+[assembly: Guid("47f29e1c-0c21-4557-bf06-b89365f7ab4f")]
 
 // Version information for an assembly consists of the following four values:
 //
