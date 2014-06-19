@@ -25,7 +25,7 @@ namespace Multi_Tool_V3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Bob")]
         public string username {
             get {
                 return ((string)(this["username"]));

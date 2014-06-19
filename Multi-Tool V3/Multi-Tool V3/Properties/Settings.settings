@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">Bob</Value>
     </Setting>
     <Setting Name="randomPasswordSetting" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
