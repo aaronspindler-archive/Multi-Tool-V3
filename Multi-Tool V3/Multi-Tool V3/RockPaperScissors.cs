@@ -13,10 +13,23 @@ namespace Multi_Tool_V3
 
         //Variables
 
-
         public void UpdateButtons(Boolean rockButtonDown, Boolean paperButtonDown, Boolean scissorsButtonDown)
         {
-            
+            if (rockButtonDown == true)
+            {
+            }
+            else
+            {
+                if (paperButtonDown == true)
+                {
+                }
+                else
+                {
+                    if (scissorsButtonDown == true)
+                    {
+                    }
+                }
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,17 +45,17 @@ namespace Multi_Tool_V3
 
         private void rockButton_Click(object sender, EventArgs e)
         {
-
+            UpdateButtons(true, false, false);
         }
 
         private void paperButton_Click(object sender, EventArgs e)
         {
-            
+            UpdateButtons(false, true, false);
         }
 
         private void scissorsButton_Click(object sender, EventArgs e)
         {
-            
+            UpdateButtons(false, false, true);
         }
     }
 }
