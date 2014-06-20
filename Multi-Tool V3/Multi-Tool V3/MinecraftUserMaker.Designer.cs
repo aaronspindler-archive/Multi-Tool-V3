@@ -66,7 +66,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(632, 532);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(705, 553);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // usernameDisplay
@@ -75,9 +75,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.usernameDisplay, 4);
             this.usernameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameDisplay.ForeColor = System.Drawing.Color.DarkRed;
-            this.usernameDisplay.Location = new System.Drawing.Point(319, 0);
+            this.usernameDisplay.Location = new System.Drawing.Point(355, 0);
             this.usernameDisplay.Name = "usernameDisplay";
-            this.usernameDisplay.Size = new System.Drawing.Size(310, 50);
+            this.usernameDisplay.Size = new System.Drawing.Size(347, 50);
             this.usernameDisplay.TabIndex = 1;
             this.usernameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -90,7 +90,7 @@
             this.optionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(316, 50);
+            this.menuStrip1.Size = new System.Drawing.Size(352, 50);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 532);
+            this.ClientSize = new System.Drawing.Size(705, 553);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
