@@ -83,5 +83,11 @@ namespace Multi_Tool_V3
             var rps = new RockPaperScissors();
             rps.Show();
         }
+
+        private void minecraftUserMakerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var mum = new MinecraftUserMaker();
+            mum.Show();
+        }
     }
 }

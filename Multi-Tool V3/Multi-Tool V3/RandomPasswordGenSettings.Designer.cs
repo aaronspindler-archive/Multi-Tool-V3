@@ -1,6 +1,6 @@
 ﻿namespace Multi_Tool_V3
 {
-    partial class RandomPasswordGenOptions
+    partial class RandomPasswordGenSettings
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandomPasswordGenOptions));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandomPasswordGenSettings));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.allCharactersCheckBox = new System.Windows.Forms.CheckBox();
             this.lettersAndNumbersCheckBox = new System.Windows.Forms.CheckBox();

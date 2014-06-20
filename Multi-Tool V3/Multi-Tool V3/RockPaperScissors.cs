@@ -12,21 +12,46 @@ namespace Multi_Tool_V3
         }
 
         //Variables
+        private Boolean rockGlobal = false;
+
+        private Boolean paperGlobal = false;
+        private Boolean scissorsGlobal = false;
 
         public void UpdateButtons(Boolean rockButtonDown, Boolean paperButtonDown, Boolean scissorsButtonDown)
         {
             if (rockButtonDown == true)
             {
+                rockGlobal = true;
+                paperGlobal = false;
+                scissorsGlobal = false;
+
+                rockButton.Enabled = true;
+                paperButton.Enabled = false;
+                scissorsButton.Enabled = false;
             }
             else
             {
                 if (paperButtonDown == true)
                 {
+                    rockGlobal = false;
+                    paperGlobal = true;
+                    scissorsGlobal = false;
+
+                    rockButton.Enabled = false;
+                    paperButton.Enabled = true;
+                    scissorsButton.Enabled = false;
                 }
                 else
                 {
                     if (scissorsButtonDown == true)
                     {
+                        rockGlobal = false;
+                        paperGlobal = false;
+                        scissorsGlobal = true;
+
+                        rockButton.Enabled = false;
+                        paperButton.Enabled = false;
+                        scissorsButton.Enabled = true;
                     }
                 }
             }

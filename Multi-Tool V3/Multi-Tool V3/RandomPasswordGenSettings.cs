@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace Multi_Tool_V3
 {
-    public partial class RandomPasswordGenOptions : Form
+    public partial class RandomPasswordGenSettings : Form
     {
         private Boolean allCharactersChecked;
         private Boolean numbersAndLettersChecked;
         private Boolean numbersAndLowerChecked;
         private Boolean numbersChecked;
 
-        public RandomPasswordGenOptions()
+        public RandomPasswordGenSettings()
         {
             InitializeComponent();
         }

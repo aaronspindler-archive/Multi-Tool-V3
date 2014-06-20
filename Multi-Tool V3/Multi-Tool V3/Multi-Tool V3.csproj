@@ -118,6 +118,18 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinecraftUserMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUserMaker.Designer.cs">
+      <DependentUpon>MinecraftUserMaker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MinecraftUserMakerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinecraftUserMakerSettings.Designer.cs">
+      <DependentUpon>MinecraftUserMakerSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgramStatistics.cs">
       <SubType>Form</SubType>
@@ -132,11 +144,11 @@
     <Compile Include="RandomPasswordGen.Designer.cs">
       <DependentUpon>RandomPasswordGen.cs</DependentUpon>
     </Compile>
-    <Compile Include="RandomPasswordGenOptions.cs">
+    <Compile Include="RandomPasswordGenSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RandomPasswordGenOptions.Designer.cs">
-      <DependentUpon>RandomPasswordGenOptions.cs</DependentUpon>
+    <Compile Include="RandomPasswordGenSettings.Designer.cs">
+      <DependentUpon>RandomPasswordGenSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="RockPaperScissors.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,12 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MinecraftUserMaker.resx">
+      <DependentUpon>MinecraftUserMaker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinecraftUserMakerSettings.resx">
+      <DependentUpon>MinecraftUserMakerSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgramStatistics.resx">
       <DependentUpon>ProgramStatistics.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,8 +199,8 @@
     <EmbeddedResource Include="RandomPasswordGen.resx">
       <DependentUpon>RandomPasswordGen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RandomPasswordGenOptions.resx">
-      <DependentUpon>RandomPasswordGenOptions.cs</DependentUpon>
+    <EmbeddedResource Include="RandomPasswordGenSettings.resx">
+      <DependentUpon>RandomPasswordGenSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RockPaperScissors.resx">
       <DependentUpon>RockPaperScissors.cs</DependentUpon>

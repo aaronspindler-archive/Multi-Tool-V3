@@ -65,7 +65,7 @@ namespace Multi_Tool_V3
 
         private void passwordTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var rpgo = new RandomPasswordGenOptions();
+            var rpgo = new RandomPasswordGenSettings();
             rpgo.Show();
         }
 
