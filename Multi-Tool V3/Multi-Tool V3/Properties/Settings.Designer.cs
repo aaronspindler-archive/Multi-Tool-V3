@@ -82,5 +82,29 @@ namespace Multi_Tool_V3.Properties {
                 this["numberOfListsRandomized"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public int minecraftPasswordLength {
+            get {
+                return ((int)(this["minecraftPasswordLength"]));
+            }
+            set {
+                this["minecraftPasswordLength"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int minecraftPasswordType {
+            get {
+                return ((int)(this["minecraftPasswordType"]));
+            }
+            set {
+                this["minecraftPasswordType"] = value;
+            }
+        }
     }
 }
