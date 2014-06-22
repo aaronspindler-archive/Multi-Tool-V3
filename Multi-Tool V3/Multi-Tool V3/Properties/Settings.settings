@@ -23,5 +23,8 @@
     <Setting Name="minecraftPasswordType" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="minecraftUserMakerRootIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">192.168.1.1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

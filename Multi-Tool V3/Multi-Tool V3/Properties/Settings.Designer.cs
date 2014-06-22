@@ -106,5 +106,17 @@ namespace Multi_Tool_V3.Properties {
                 this["minecraftPasswordType"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.1")]
+        public string minecraftUserMakerRootIP {
+            get {
+                return ((string)(this["minecraftUserMakerRootIP"]));
+            }
+            set {
+                this["minecraftUserMakerRootIP"] = value;
+            }
+        }
     }
 }

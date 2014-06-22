@@ -162,6 +162,7 @@
     <Compile Include="RollTheDice.Designer.cs">
       <DependentUpon>RollTheDice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="UsefulCode.cs" />
     <EmbeddedResource Include="Converter.resx">
       <DependentUpon>Converter.cs</DependentUpon>

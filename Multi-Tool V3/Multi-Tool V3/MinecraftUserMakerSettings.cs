@@ -21,12 +21,18 @@ namespace Multi_Tool_V3
         {
             Settings.Default.minecraftPasswordLength = passwordLength;
             Settings.Default.minecraftPasswordType = passwordType;
+            Settings.Default.minecraftUserMakerRootIP = rootServerIP;
             Settings.Default.Save();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MinecraftUserMakerSettings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveSettings();
         }
 
         private void MinecraftUserMakerSettings_Load(object sender, EventArgs e)
@@ -41,16 +47,12 @@ namespace Multi_Tool_V3
             }
 
             passwordTypeCombo.SelectedIndex = Settings.Default.minecraftPasswordType;
+            rootServerIPTextBox.Text = Settings.Default.minecraftUserMakerRootIP;
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void passwordLengthTextBox_MouseClick(object sender, MouseEventArgs e)
         {
-            SaveSettings();
-        }
-
-        private void saveSettingsButton_Click(object sender, EventArgs e)
-        {
-            SaveSettings();
+            passwordLengthTextBox.Text = ("");
         }
 
         private void passwordLengthTextBox_TextChanged(object sender, EventArgs e)
@@ -59,16 +61,6 @@ namespace Multi_Tool_V3
             {
                 passwordLength = Convert.ToInt32(passwordLengthTextBox.Text);
             }
-        }
-
-        private void passwordLengthTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            passwordLengthTextBox.Text = ("");
-        }
-
-        private void MinecraftUserMakerSettings_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            SaveSettings();
         }
 
         private void passwordTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,6 +89,11 @@ namespace Multi_Tool_V3
             }
         }
 
+        private void rootServerIPTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            rootServerIPTextBox.Text = ("");
+        }
+
         private void rootServerIPTextBox_TextChanged(object sender, EventArgs e)
         {
             if (rootServerIPTextBox.Text != (""))
@@ -105,9 +102,14 @@ namespace Multi_Tool_V3
             }
         }
 
-        private void rootServerIPTextBox_MouseClick(object sender, MouseEventArgs e)
+        private void saveSettingsButton_Click(object sender, EventArgs e)
         {
-            rootServerIPTextBox.Text = ("");
+            SaveSettings();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
         }
     }
 }
