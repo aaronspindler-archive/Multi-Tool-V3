@@ -1,15 +1,16 @@
-﻿using System;
+﻿//@author xNovax
+using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
-//@author xNovax
 namespace Multi_Tool_V3
 {
     public partial class MinecraftUserMakerSettings : Form
     {
         //Variables
         private int passwordLength = 8;
-
-        private int passwordType = 0;
+        private int passwordType;
+        private string rootServerIP = ("192.168.1.1");
 
         public MinecraftUserMakerSettings()
         {
@@ -18,25 +19,28 @@ namespace Multi_Tool_V3
 
         public void SaveSettings()
         {
-            Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength = passwordLength;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.minecraftPasswordLength = passwordLength;
+            Settings.Default.minecraftPasswordType = passwordType;
+            Settings.Default.Save();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void MinecraftUserMakerSettings_Load(object sender, EventArgs e)
         {
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
 
-            if (Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength != 8)
+            if (Settings.Default.minecraftPasswordLength != 8)
             {
-                passwordLengthTextBox.Text = (Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength));
-                passwordLength = Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength;
+                passwordLengthTextBox.Text = (Convert.ToString(Settings.Default.minecraftPasswordLength));
+                passwordLength = Settings.Default.minecraftPasswordLength;
             }
+
+            passwordTypeCombo.SelectedIndex = Settings.Default.minecraftPasswordType;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,35 +73,41 @@ namespace Multi_Tool_V3
 
         private void passwordTypeCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (passwordTypeCombo.SelectedIndex == 0)
+            switch (passwordTypeCombo.SelectedIndex)
             {
-                passwordType = 1;
-            }
-            else
-            {
-                if (passwordTypeCombo.SelectedIndex == 1)
-                {
+                case 0:
+                    passwordType = 1;
+                    break;
+
+                case 1:
                     passwordType = 2;
-                }
-                else
-                {
-                    if (passwordTypeCombo.SelectedIndex == 2)
-                    {
-                        passwordType = 3;
-                    }
-                    else
-                    {
-                        if (passwordTypeCombo.SelectedIndex == 3)
-                        {
-                            passwordType = 4;
-                        }
-                        else
-                        {
-                            passwordType = 0;
-                        }
-                    }
-                }
+                    break;
+
+                case 2:
+                    passwordType = 3;
+                    break;
+
+                case 3:
+                    passwordType = 4;
+                    break;
+
+                default:
+                    passwordType = 0;
+                    break;
             }
+        }
+
+        private void rootServerIPTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (rootServerIPTextBox.Text != (""))
+            {
+                rootServerIP = rootServerIPTextBox.Text;
+            }
+        }
+
+        private void rootServerIPTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            rootServerIPTextBox.Text = ("");
         }
     }
 }

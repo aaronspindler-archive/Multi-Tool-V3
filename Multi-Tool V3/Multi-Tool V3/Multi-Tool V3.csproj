@@ -231,6 +231,9 @@
     <Content Include="Resources\minecraft-icon-ico.ico" />
     <Content Include="Resources\randomPasswordGeneratorIcon.ico" />
     <Content Include="Resources\rock-paper-scissors Icon.ico" />
+    <Content Include="Resources\rsz_paper.png" />
+    <Content Include="Resources\rsz_rock.png" />
+    <Content Include="Resources\rsz_scissors.png" />
     <Content Include="Resources\settings.ico" />
     <Content Include="Resources\Statistics Icon.ico" />
     <Content Include="Resources\wrench-clip-art-icon.ico" />
