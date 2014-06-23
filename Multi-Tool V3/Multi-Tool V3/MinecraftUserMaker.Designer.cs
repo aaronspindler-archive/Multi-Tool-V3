@@ -30,17 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinecraftUserMaker));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cusstomPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.mumHelpLabel = new System.Windows.Forms.Label();
             this.usernameDisplay = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mumHelpLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
             this.customPasswordCheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.minecraftServerPortLabel = new System.Windows.Forms.Label();
+            this.mcServerPortTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,13 +58,15 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.minecraftServerPortLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cusstomPasswordTextBox, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.usernameLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.mumHelpLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.usernameDisplay, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.customPasswordCheckBox, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.usernameTextBox, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.mcServerPortTextBox, 5, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -78,6 +82,40 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(982, 396);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // cusstomPasswordTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.cusstomPasswordTextBox, 3);
+            this.cusstomPasswordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cusstomPasswordTextBox.Location = new System.Drawing.Point(613, 139);
+            this.cusstomPasswordTextBox.Name = "cusstomPasswordTextBox";
+            this.cusstomPasswordTextBox.Size = new System.Drawing.Size(366, 31);
+            this.cusstomPasswordTextBox.TabIndex = 1;
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.usernameLabel, 4);
+            this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernameLabel.Location = new System.Drawing.Point(3, 93);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(482, 43);
+            this.usernameLabel.TabIndex = 1;
+            this.usernameLabel.Text = "Username:";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mumHelpLabel
+            // 
+            this.mumHelpLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.mumHelpLabel, 8);
+            this.mumHelpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mumHelpLabel.Location = new System.Drawing.Point(3, 50);
+            this.mumHelpLabel.Name = "mumHelpLabel";
+            this.mumHelpLabel.Size = new System.Drawing.Size(976, 43);
+            this.mumHelpLabel.TabIndex = 1;
+            this.mumHelpLabel.Text = "Please make sure that you have selected and entered your settings in the options " +
+    "menu above";
+            this.mumHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // usernameDisplay
             // 
@@ -115,7 +153,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -130,34 +168,9 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(244, 36);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(176, 36);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // mumHelpLabel
-            // 
-            this.mumHelpLabel.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.mumHelpLabel, 8);
-            this.mumHelpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mumHelpLabel.Location = new System.Drawing.Point(3, 50);
-            this.mumHelpLabel.Name = "mumHelpLabel";
-            this.mumHelpLabel.Size = new System.Drawing.Size(976, 43);
-            this.mumHelpLabel.TabIndex = 1;
-            this.mumHelpLabel.Text = "Please make sure that you have selected and entered your settings in the options " +
-    "menu above";
-            this.mumHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.usernameLabel, 4);
-            this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameLabel.Location = new System.Drawing.Point(3, 93);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(482, 43);
-            this.usernameLabel.TabIndex = 1;
-            this.usernameLabel.Text = "Username:";
-            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // customPasswordCheckBox
             // 
@@ -173,23 +186,35 @@
             this.customPasswordCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.customPasswordCheckBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // usernameTextBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox1, 3);
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(613, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 31);
-            this.textBox1.TabIndex = 3;
+            this.tableLayoutPanel1.SetColumnSpan(this.usernameTextBox, 3);
+            this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.usernameTextBox.Location = new System.Drawing.Point(613, 96);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(366, 31);
+            this.usernameTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // minecraftServerPortLabel
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 3);
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(613, 139);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(366, 31);
-            this.textBox2.TabIndex = 1;
+            this.minecraftServerPortLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.minecraftServerPortLabel, 4);
+            this.minecraftServerPortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.minecraftServerPortLabel.Location = new System.Drawing.Point(3, 179);
+            this.minecraftServerPortLabel.Name = "minecraftServerPortLabel";
+            this.minecraftServerPortLabel.Size = new System.Drawing.Size(482, 43);
+            this.minecraftServerPortLabel.TabIndex = 1;
+            this.minecraftServerPortLabel.Text = "Minecraft Server Port: ";
+            this.minecraftServerPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // mcServerPortTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.mcServerPortTextBox, 3);
+            this.mcServerPortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mcServerPortTextBox.Location = new System.Drawing.Point(613, 182);
+            this.mcServerPortTextBox.Name = "mcServerPortTextBox";
+            this.mcServerPortTextBox.Size = new System.Drawing.Size(366, 31);
+            this.mcServerPortTextBox.TabIndex = 4;
             // 
             // MinecraftUserMaker
             // 
@@ -222,7 +247,9 @@
         private System.Windows.Forms.Label mumHelpLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.CheckBox customPasswordCheckBox;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cusstomPasswordTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.Label minecraftServerPortLabel;
+        private System.Windows.Forms.TextBox mcServerPortTextBox;
     }
 }
