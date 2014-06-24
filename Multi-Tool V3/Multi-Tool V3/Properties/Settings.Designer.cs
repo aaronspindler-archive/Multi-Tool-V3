@@ -118,5 +118,17 @@ namespace Multi_Tool_V3.Properties {
                 this["minecraftUserMakerRootIP"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8821")]
+        public string minecraftFtpPort {
+            get {
+                return ((string)(this["minecraftFtpPort"]));
+            }
+            set {
+                this["minecraftFtpPort"] = value;
+            }
+        }
     }
 }

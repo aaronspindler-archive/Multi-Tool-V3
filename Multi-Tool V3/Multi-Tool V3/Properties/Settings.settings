@@ -26,5 +26,8 @@
     <Setting Name="minecraftUserMakerRootIP" Type="System.String" Scope="User">
       <Value Profile="(Default)">192.168.1.1</Value>
     </Setting>
+    <Setting Name="minecraftFtpPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8821</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
