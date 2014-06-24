@@ -48,7 +48,7 @@ namespace Multi_Tool_V3
                 passwordLength = Settings.Default.minecraftPasswordLength;
             }
 
-            passwordTypeCombo.SelectedIndex = Settings.Default.minecraftPasswordType;
+            passwordTypeCombo.SelectedIndex = Settings.Default.minecraftPasswordType - 1;
             rootServerIPTextBox.Text = Settings.Default.minecraftUserMakerRootIP;
             ftpPortTextBox.Text = Settings.Default.minecraftFtpPort;
         }

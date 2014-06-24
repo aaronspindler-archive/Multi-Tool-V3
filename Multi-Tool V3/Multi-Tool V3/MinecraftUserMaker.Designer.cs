@@ -283,6 +283,10 @@
             this.controlPanelPortTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.controlPanelPortTextBox_MouseClick);
             this.controlPanelPortTextBox.TextChanged += new System.EventHandler(this.controlPanelPortTextBox_TextChanged);
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            // 
             // MinecraftUserMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

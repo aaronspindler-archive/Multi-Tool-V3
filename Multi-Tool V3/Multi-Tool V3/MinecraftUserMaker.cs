@@ -133,6 +133,8 @@ namespace Multi_Tool_V3
                     writer.WriteLine("FTP IP: " + Multi_Tool_V3.Properties.Settings.Default.minecraftUserMakerRootIP + ":" + Multi_Tool_V3.Properties.Settings.Default.minecraftFtpPort);
                     writer.WriteLine("FTP Username: " + username);
                     writer.WriteLine("FTP Password: " + WhichPassword());
+                    writer.WriteLine("=================================================");
+                    writer.Close();
                 }
                 else
                 {

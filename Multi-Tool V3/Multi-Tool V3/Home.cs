@@ -89,5 +89,11 @@ namespace Multi_Tool_V3
             var mum = new MinecraftUserMaker();
             mum.Show();
         }
+
+        private void clearSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Multi_Tool_V3.Properties.Settings.Default.Reset();
+            Multi_Tool_V3.Properties.Settings.Default.Save();
+        }
     }
 }

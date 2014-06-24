@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -33,7 +34,8 @@ namespace Multi_Tool_V3
             char[] letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
             char[] lettersAndNumbers = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
             char[] allCharacters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?' };
-            char[] passwordArray = { };
+            char[] passwordArray = {};
+            List<char> passwordList = new List<char>();
             int randomNumber = 0;
 
             if (passwordType == 0)
@@ -47,9 +49,9 @@ namespace Multi_Tool_V3
                     for (var i = 0; i < passwordLength; i++)
                     {
                         randomNumber = gen.Next(10);
-                        passwordArray[i] = numbers[randomNumber];
+                        passwordList.Add(numbers[randomNumber]);
                     }
-                    passwordToString = passwordArray.ToString();
+                    passwordToString = string.Join("", passwordList.ToArray());
                 }
                 else
                 {
@@ -58,9 +60,9 @@ namespace Multi_Tool_V3
                         for (var i = 0; i < passwordLength; i++)
                         {
                             randomNumber = gen.Next(52);
-                            passwordArray[i] = letters[randomNumber];
+                            passwordList.Add(letters[randomNumber]);
                         }
-                        passwordToString = passwordArray.ToString();
+                        passwordToString = string.Join("", passwordList.ToArray());
                     }
                     else
                     {
@@ -69,9 +71,9 @@ namespace Multi_Tool_V3
                             for (var i = 0; i < passwordLength; i++)
                             {
                                 randomNumber = gen.Next(62);
-                                passwordArray[i] = lettersAndNumbers[randomNumber];
+                                passwordList.Add(lettersAndNumbers[randomNumber]);
                             }
-                            passwordToString = passwordArray.ToString();
+                            passwordToString = string.Join("", passwordList.ToArray());
                         }
                         else
                         {
@@ -80,16 +82,16 @@ namespace Multi_Tool_V3
                                 for (var i = 0; i < passwordLength; i++)
                                 {
                                     randomNumber = gen.Next(73);
-                                    passwordArray[i] = allCharacters[randomNumber];
+                                    passwordList.Add(allCharacters[randomNumber]);
                                 }
-                                passwordToString = passwordArray.ToString();
+                                passwordToString = string.Join("", passwordList.ToArray());
                             }
                         }
                     }
                 }
             }
-            Multi_Tool_V3.Properties.Settings.Default.numberOfListsRandomized =
-            Multi_Tool_V3.Properties.Settings.Default.numberOfListsRandomized + 1;
+            Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated =
+            Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated + 1;
             Multi_Tool_V3.Properties.Settings.Default.Save();
             return passwordToString;
         }
