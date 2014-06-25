@@ -46,13 +46,13 @@
             this.statisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.usernameDisplay = new System.Windows.Forms.Label();
             this.timeDisplay = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.debugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clearSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -201,9 +201,24 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // debugToolStripMenuItem
+            // 
+            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clearSettingsToolStripMenuItem});
+            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.debugToolStripMenuItem.Text = "Debug";
+            // 
+            // clearSettingsToolStripMenuItem
+            // 
+            this.clearSettingsToolStripMenuItem.Name = "clearSettingsToolStripMenuItem";
+            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.clearSettingsToolStripMenuItem.Text = "Clear Settings";
+            this.clearSettingsToolStripMenuItem.Click += new System.EventHandler(this.clearSettingsToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -255,21 +270,6 @@
             // 
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // debugToolStripMenuItem
-            // 
-            this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clearSettingsToolStripMenuItem});
-            this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.debugToolStripMenuItem.Text = "Debug";
-            // 
-            // clearSettingsToolStripMenuItem
-            // 
-            this.clearSettingsToolStripMenuItem.Name = "clearSettingsToolStripMenuItem";
-            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clearSettingsToolStripMenuItem.Text = "Clear Settings";
-            this.clearSettingsToolStripMenuItem.Click += new System.EventHandler(this.clearSettingsToolStripMenuItem_Click);
             // 
             // Home
             // 

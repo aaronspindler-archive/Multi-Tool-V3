@@ -18,112 +18,6 @@ namespace Multi_Tool_V3
             InitializeComponent();
         }
 
-        private void RandomPasswordGenOptions_Load(object sender, EventArgs e)
-        {
-            var username = Settings.Default.username;
-            usernameDisplay.Text = ("Logged in as: " + username);
-
-            switch (Settings.Default.randomPasswordSetting)
-            {
-                case 1:
-                    numbersCheckBox.Checked = true;
-                    numbersChecked = true;
-                    SetSelection();
-                    break;
-
-                case 2:
-                    lowerAndNumbersCheckBox.Checked = true;
-                    numbersAndLowerChecked = true;
-                    SetSelection();
-                    break;
-
-                case 3:
-                    lettersAndNumbersCheckBox.Checked = true;
-                    numbersAndLettersChecked = true;
-                    SetSelection();
-                    break;
-
-                case 4:
-                    allCharactersCheckBox.Checked = true;
-                    allCharactersChecked = true;
-                    SetSelection();
-                    break;
-
-                default:
-                    SetSelection();
-                    break;
-            }
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void numbersOnlyCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (numbersCheckBox.Checked)
-            {
-                numbersChecked = true;
-            }
-            else
-            {
-                if (numbersCheckBox.Checked == false)
-                {
-                    numbersChecked = false;
-                }
-            }
-            SetSelection();
-        }
-
-        private void lowerCaseAndNumbersCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (lowerAndNumbersCheckBox.Checked)
-            {
-                numbersAndLowerChecked = true;
-            }
-            else
-            {
-                if (lowerAndNumbersCheckBox.Checked == false)
-                {
-                    numbersAndLowerChecked = false;
-                }
-            }
-            SetSelection();
-        }
-
-        private void allLettersAndNumbersCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (lettersAndNumbersCheckBox.Checked)
-            {
-                numbersAndLettersChecked = true;
-            }
-            else
-            {
-                if (lettersAndNumbersCheckBox.Checked == false)
-                {
-                    numbersAndLettersChecked = false;
-                }
-            }
-            SetSelection();
-        }
-
-        private void allLettersNumbersAndCharactersCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (allCharactersCheckBox.Checked)
-            {
-                allCharactersChecked = true;
-            }
-            else
-            {
-                if (allCharactersCheckBox.Checked == false)
-                {
-                    allCharactersChecked = false;
-                }
-            }
-            SetSelection();
-        }
-
         public void SetSelection()
         {
             if (numbersChecked)
@@ -232,6 +126,112 @@ namespace Multi_Tool_V3
             }
 
             Settings.Default.Save();
+        }
+
+        private void allLettersAndNumbersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (lettersAndNumbersCheckBox.Checked)
+            {
+                numbersAndLettersChecked = true;
+            }
+            else
+            {
+                if (lettersAndNumbersCheckBox.Checked == false)
+                {
+                    numbersAndLettersChecked = false;
+                }
+            }
+            SetSelection();
+        }
+
+        private void allLettersNumbersAndCharactersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (allCharactersCheckBox.Checked)
+            {
+                allCharactersChecked = true;
+            }
+            else
+            {
+                if (allCharactersCheckBox.Checked == false)
+                {
+                    allCharactersChecked = false;
+                }
+            }
+            SetSelection();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lowerCaseAndNumbersCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (lowerAndNumbersCheckBox.Checked)
+            {
+                numbersAndLowerChecked = true;
+            }
+            else
+            {
+                if (lowerAndNumbersCheckBox.Checked == false)
+                {
+                    numbersAndLowerChecked = false;
+                }
+            }
+            SetSelection();
+        }
+
+        private void numbersOnlyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (numbersCheckBox.Checked)
+            {
+                numbersChecked = true;
+            }
+            else
+            {
+                if (numbersCheckBox.Checked == false)
+                {
+                    numbersChecked = false;
+                }
+            }
+            SetSelection();
+        }
+
+        private void RandomPasswordGenOptions_Load(object sender, EventArgs e)
+        {
+            var username = Settings.Default.username;
+            usernameDisplay.Text = ("Logged in as: " + username);
+
+            switch (Settings.Default.randomPasswordSetting)
+            {
+                case 1:
+                    numbersCheckBox.Checked = true;
+                    numbersChecked = true;
+                    SetSelection();
+                    break;
+
+                case 2:
+                    lowerAndNumbersCheckBox.Checked = true;
+                    numbersAndLowerChecked = true;
+                    SetSelection();
+                    break;
+
+                case 3:
+                    lettersAndNumbersCheckBox.Checked = true;
+                    numbersAndLettersChecked = true;
+                    SetSelection();
+                    break;
+
+                case 4:
+                    allCharactersCheckBox.Checked = true;
+                    allCharactersChecked = true;
+                    SetSelection();
+                    break;
+
+                default:
+                    SetSelection();
+                    break;
+            }
         }
     }
 }

@@ -6,15 +6,36 @@ namespace Multi_Tool_V3
 {
     public partial class Home : Form
     {
-        public Home()
-        {
-            InitializeComponent();
-        }
+        private string time;
 
         //Variables
         private UsefulCode uc = new UsefulCode();
 
-        private string time;
+        public Home()
+        {
+            InitializeComponent();
+        }
+        private void clearSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Multi_Tool_V3.Properties.Settings.Default.Reset();
+            Multi_Tool_V3.Properties.Settings.Default.Save();
+        }
+
+        private void converterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var con = new Converter();
+            con.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -25,39 +46,10 @@ namespace Multi_Tool_V3
             timer.Tick += timer_Tick;
             timer.Start();
         }
-
-        private void Home_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void randomPasswordGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var rpg = new RandomPasswordGen();
-            rpg.Show();
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            time = uc.GetCurrentTime();
-            timeDisplay.Text = ("Current Time: " + time);
-        }
-
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var info = new Information();
             info.Show();
-        }
-
-        private void rollTheDiceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var rtd = new RollTheDice();
-            rtd.Show();
         }
 
         private void listRandomizerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,16 +58,16 @@ namespace Multi_Tool_V3
             lr.Show();
         }
 
-        private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void minecraftUserMakerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var stats = new ProgramStatistics();
-            stats.Show();
+            var mum = new MinecraftUserMaker();
+            mum.Show();
         }
 
-        private void converterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void randomPasswordGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var con = new Converter();
-            con.Show();
+            var rpg = new RandomPasswordGen();
+            rpg.Show();
         }
 
         private void rockPaperScissorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -84,16 +76,22 @@ namespace Multi_Tool_V3
             rps.Show();
         }
 
-        private void minecraftUserMakerToolStripMenuItem_Click(object sender, EventArgs e)
+        private void rollTheDiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var mum = new MinecraftUserMaker();
-            mum.Show();
+            var rtd = new RollTheDice();
+            rtd.Show();
         }
 
-        private void clearSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void statisticsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Multi_Tool_V3.Properties.Settings.Default.Reset();
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            var stats = new ProgramStatistics();
+            stats.Show();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            time = uc.GetCurrentTime();
+            timeDisplay.Text = ("Current Time: " + time);
         }
     }
 }

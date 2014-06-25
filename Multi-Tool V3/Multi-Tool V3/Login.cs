@@ -6,22 +6,17 @@ namespace Multi_Tool_V3
 {
     public partial class Login : Form
     {
+        //Variables
+        private string error = ("");
+
+        private string password = ("");
+
+        private string username = ("");
+
         public Login()
         {
             InitializeComponent();
         }
-
-        //Variables
-        private string error = ("");
-
-        private string username = ("");
-        private string password = ("");
-
-        public void ErrorOccured()
-        {
-            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
         public void CheckForText()
         {
             if ((usernameTextBox.Text == ("")) || (passwordTextBox.Text == ("")))
@@ -34,6 +29,10 @@ namespace Multi_Tool_V3
             }
         }
 
+        public void ErrorOccured()
+        {
+            MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         public void LoginCheck()
         {
             if ((username == ("xNovax")) && (password == ("password")))
@@ -54,16 +53,20 @@ namespace Multi_Tool_V3
             Multi_Tool_V3.Properties.Settings.Default.Save();
         }
 
+        private void createNewUserButton_Click(object sender, EventArgs e)
+        {
+            error = ("Feature not yet implemented");
+            ErrorOccured();
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
             CheckForText();
         }
 
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            CheckForText();
-            username = usernameTextBox.Text;
-            Multi_Tool_V3.Properties.Settings.Default.username = username;
+            LoginCheck();
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)
@@ -72,15 +75,11 @@ namespace Multi_Tool_V3
             password = passwordTextBox.Text;
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
         {
-            LoginCheck();
-        }
-
-        private void createNewUserButton_Click(object sender, EventArgs e)
-        {
-            error = ("Feature not yet implemented");
-            ErrorOccured();
+            CheckForText();
+            username = usernameTextBox.Text;
+            Multi_Tool_V3.Properties.Settings.Default.username = username;
         }
     }
 }

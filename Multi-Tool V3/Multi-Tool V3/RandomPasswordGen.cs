@@ -52,49 +52,6 @@ namespace Multi_Tool_V3
 
         //Password Character Blocks
 
-        private void RandomPasswordGenerator_Load(object sender, EventArgs e)
-        {
-            string username = Settings.Default.username;
-            usernameDisplay.Text = ("Logged in as: " + username);
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void passwordTypeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var rpgo = new RandomPasswordGenSettings();
-            rpgo.Show();
-        }
-
-        private void numPasswordsTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (numPasswordsTextBox.Text != (""))
-            {
-                numPasswords = Convert.ToInt64(numPasswordsTextBox.Text);
-            }
-        }
-
-        private void lengthPasswordTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (lengthPasswordTextBox.Text != (""))
-            {
-                lengthPasswords = Convert.ToInt64(lengthPasswordTextBox.Text);
-            }
-        }
-
-        private void numPasswordsTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            numPasswordsTextBox.Text = ("");
-        }
-
-        private void lengthPasswordTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            lengthPasswordTextBox.Text = ("");
-        }
-
         private void createPasswordsButton_Click(object sender, EventArgs e)
         {
             passwordType = Settings.Default.randomPasswordSetting;
@@ -212,6 +169,49 @@ namespace Multi_Tool_V3
             {
                 uc.ErrorOccured("You have not selected a password type.");
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void lengthPasswordTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            lengthPasswordTextBox.Text = ("");
+        }
+
+        private void lengthPasswordTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (lengthPasswordTextBox.Text != (""))
+            {
+                lengthPasswords = Convert.ToInt64(lengthPasswordTextBox.Text);
+            }
+        }
+
+        private void numPasswordsTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            numPasswordsTextBox.Text = ("");
+        }
+
+        private void numPasswordsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (numPasswordsTextBox.Text != (""))
+            {
+                numPasswords = Convert.ToInt64(numPasswordsTextBox.Text);
+            }
+        }
+
+        private void passwordTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var rpgo = new RandomPasswordGenSettings();
+            rpgo.Show();
+        }
+
+        private void RandomPasswordGenerator_Load(object sender, EventArgs e)
+        {
+            string username = Settings.Default.username;
+            usernameDisplay.Text = ("Logged in as: " + username);
         }
     }
 }

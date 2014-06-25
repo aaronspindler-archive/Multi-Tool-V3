@@ -7,7 +7,7 @@ namespace Multi_Tool_V3
 {
     public partial class MinecraftUserMaker : Form
     {
-        UsefulCode uc = new UsefulCode();
+        private UsefulCode uc = new UsefulCode();
         private Boolean customPassUsed = false;
         private string username = ("");
         private string customPassword = ("");
@@ -28,8 +28,9 @@ namespace Multi_Tool_V3
                 case true:
                     passwordToPrint = customPassword;
                     break;
+
                 case false:
-                    passwordToPrint = uc.MakeRandomPassword(Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordType,Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength);
+                    passwordToPrint = uc.MakeRandomPassword(Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordType, Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength);
                     break;
             }
             return passwordToPrint;
@@ -43,6 +44,7 @@ namespace Multi_Tool_V3
                     customPasswordTextBox.Enabled = true;
                     customPassUsed = true;
                     break;
+
                 case false:
                     customPasswordTextBox.Enabled = false;
                     customPassUsed = false;
@@ -108,7 +110,6 @@ namespace Multi_Tool_V3
 
         private void createFileButton_Click(object sender, EventArgs e)
         {
-
             if ((usernameTextBox.Text == ("")) || (mcServerPortTextBox.Text == ("")))
             {
                 uc.ErrorOccured("Please fill in the username and/or minecraft server port field.");

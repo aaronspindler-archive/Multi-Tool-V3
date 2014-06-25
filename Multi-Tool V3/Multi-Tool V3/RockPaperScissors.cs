@@ -14,6 +14,7 @@ namespace Multi_Tool_V3
 
         //Variables
         private Random gen = new Random();
+
         private Boolean rockGlobal = false;
         private Boolean paperGlobal = false;
         private Boolean scissorsGlobal = false;
@@ -57,7 +58,7 @@ namespace Multi_Tool_V3
                 rockRobot = true;
                 paperRobot = false;
                 scissorsRobot = false;
-                robotsChoiceDisplay.Text = ("Player 2: Rock");
+                robotsChoiceDisplay.Text = ("Bot: Rock");
             }
             else
             {
@@ -66,7 +67,7 @@ namespace Multi_Tool_V3
                     rockRobot = false;
                     paperRobot = true;
                     scissorsRobot = false;
-                    robotsChoiceDisplay.Text = ("Player 2: Paper");
+                    robotsChoiceDisplay.Text = ("Bot: Paper");
                 }
                 else
                 {
@@ -75,7 +76,7 @@ namespace Multi_Tool_V3
                         rockRobot = false;
                         paperRobot = false;
                         scissorsRobot = true;
-                        robotsChoiceDisplay.Text = ("Player 2: Scissors");
+                        robotsChoiceDisplay.Text = ("Bot: Scissors");
                     }
                 }
             }
@@ -83,7 +84,6 @@ namespace Multi_Tool_V3
 
         public void WhoWon()
         {
-            
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
