@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RockPaperScissors));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.rockButton = new System.Windows.Forms.Button();
             this.usernameDisplay = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rockPaperScissorsHelpLabel = new System.Windows.Forms.Label();
-            this.rockButton = new System.Windows.Forms.Button();
             this.paperButton = new System.Windows.Forms.Button();
             this.scissorsButton = new System.Windows.Forms.Button();
             this.robotsChoiceDisplay = new System.Windows.Forms.Label();
+            this.winnerDisplay = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             this.tableLayoutPanel.Controls.Add(this.paperButton, 3, 2);
             this.tableLayoutPanel.Controls.Add(this.scissorsButton, 6, 2);
             this.tableLayoutPanel.Controls.Add(this.robotsChoiceDisplay, 0, 4);
+            this.tableLayoutPanel.Controls.Add(this.winnerDisplay, 2, 6);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -74,8 +76,22 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(348, 209);
             this.tableLayoutPanel.TabIndex = 0;
+            // 
+            // rockButton
+            // 
+            this.tableLayoutPanel.SetColumnSpan(this.rockButton, 2);
+            this.rockButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rockButton.Location = new System.Drawing.Point(3, 46);
+            this.rockButton.Name = "rockButton";
+            this.tableLayoutPanel.SetRowSpan(this.rockButton, 2);
+            this.rockButton.Size = new System.Drawing.Size(80, 40);
+            this.rockButton.TabIndex = 1;
+            this.rockButton.Text = "Rock";
+            this.rockButton.UseVisualStyleBackColor = true;
+            this.rockButton.Click += new System.EventHandler(this.rockButton_Click);
             // 
             // usernameDisplay
             // 
@@ -111,7 +127,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -127,19 +143,6 @@
             this.rockPaperScissorsHelpLabel.TabIndex = 2;
             this.rockPaperScissorsHelpLabel.Text = "Click a button below to select what item you will play";
             this.rockPaperScissorsHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rockButton
-            // 
-            this.tableLayoutPanel.SetColumnSpan(this.rockButton, 2);
-            this.rockButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rockButton.Location = new System.Drawing.Point(3, 46);
-            this.rockButton.Name = "rockButton";
-            this.tableLayoutPanel.SetRowSpan(this.rockButton, 2);
-            this.rockButton.Size = new System.Drawing.Size(80, 40);
-            this.rockButton.TabIndex = 1;
-            this.rockButton.Text = "Rock";
-            this.rockButton.UseVisualStyleBackColor = true;
-            this.rockButton.Click += new System.EventHandler(this.rockButton_Click);
             // 
             // paperButton
             // 
@@ -178,6 +181,18 @@
             this.robotsChoiceDisplay.TabIndex = 1;
             this.robotsChoiceDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // winnerDisplay
+            // 
+            this.winnerDisplay.AutoSize = true;
+            this.tableLayoutPanel.SetColumnSpan(this.winnerDisplay, 4);
+            this.winnerDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.winnerDisplay.Location = new System.Drawing.Point(89, 135);
+            this.winnerDisplay.Name = "winnerDisplay";
+            this.tableLayoutPanel.SetRowSpan(this.winnerDisplay, 2);
+            this.winnerDisplay.Size = new System.Drawing.Size(166, 46);
+            this.winnerDisplay.TabIndex = 5;
+            this.winnerDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RockPaperScissors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,5 +224,6 @@
         private System.Windows.Forms.Button paperButton;
         private System.Windows.Forms.Button scissorsButton;
         private System.Windows.Forms.Label robotsChoiceDisplay;
+        private System.Windows.Forms.Label winnerDisplay;
     }
 }

@@ -21,6 +21,8 @@ namespace Multi_Tool_V3
         private Boolean rockRobot = false;
         private Boolean paperRobot = false;
         private Boolean scissorsRobot = false;
+        private Boolean humanWon = false;
+        private Boolean tieOccured = false;
 
         public void UpdateButtons()
         {
@@ -53,37 +55,76 @@ namespace Multi_Tool_V3
         public void RobotChoose()
         {
             var randomNumber = gen.Next(3);
-            if (randomNumber == 0)
+            switch (randomNumber)
             {
-                rockRobot = true;
-                paperRobot = false;
-                scissorsRobot = false;
-                robotsChoiceDisplay.Text = ("Bot: Rock");
-            }
-            else
-            {
-                if (randomNumber == 1)
-                {
+                case 0:
+                    rockRobot = true;
+                    paperRobot = false;
+                    scissorsRobot = false;
+                    robotsChoiceDisplay.Text = ("Bot: Rock");
+                    break;
+                case 1:
                     rockRobot = false;
                     paperRobot = true;
                     scissorsRobot = false;
                     robotsChoiceDisplay.Text = ("Bot: Paper");
-                }
-                else
-                {
-                    if (randomNumber == 2)
-                    {
-                        rockRobot = false;
-                        paperRobot = false;
-                        scissorsRobot = true;
-                        robotsChoiceDisplay.Text = ("Bot: Scissors");
-                    }
-                }
+                    break;
+                case 2:
+                    rockRobot = false;
+                    paperRobot = false;
+                    scissorsRobot = true;
+                    robotsChoiceDisplay.Text = ("Bot: Scissors");
+                    break;
             }
         }
 
         public void WhoWon()
         {
+            //Who Won Code
+            if ((rockGlobal == true) && (scissorsRobot == true))
+            {
+                humanWon = true;
+            }
+            else
+            {
+                if ((paperGlobal == true) && (rockRobot == true))
+                {
+                    humanWon = true;
+                }
+                else
+                {
+                    if ((scissorsGlobal == true) && (paperRobot == true))
+                    {
+                        humanWon = true;
+                    }
+                }
+            }
+
+
+            //Winner Display Code
+            if (tieOccured == true)
+            {
+                winnerDisplay.Text = ("Tie Game!");
+                humanWon = false;
+                tieOccured = false;
+            }
+            else
+            {
+                if (tieOccured == false)
+                {
+                    switch (humanWon)
+                    {
+                        case true:
+                            winnerDisplay.Text = ("You have won!");
+                            humanWon = false;
+                            break;
+                        case false:
+                            winnerDisplay.Text = ("You have lost!");
+                            humanWon = false;
+                            break;
+                    }
+                }
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +145,7 @@ namespace Multi_Tool_V3
             scissorsGlobal = false;
             UpdateButtons();
             RobotChoose();
+            WhoWon();
         }
 
         private void paperButton_Click(object sender, EventArgs e)
@@ -113,6 +155,7 @@ namespace Multi_Tool_V3
             scissorsGlobal = false;
             UpdateButtons();
             RobotChoose();
+            WhoWon();
         }
 
         private void scissorsButton_Click(object sender, EventArgs e)
@@ -122,6 +165,7 @@ namespace Multi_Tool_V3
             scissorsGlobal = true;
             UpdateButtons();
             RobotChoose();
+            WhoWon();
         }
     }
 }
