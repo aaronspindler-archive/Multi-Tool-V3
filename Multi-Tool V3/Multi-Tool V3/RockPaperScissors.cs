@@ -1,32 +1,34 @@
 ﻿using System;
 using System.Drawing;
-using System.Reflection;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
+
 namespace Multi_Tool_V3
 {
     public partial class RockPaperScissors : Form
     {
+        //Variables
+        private readonly Random gen = new Random();
+        private Boolean humanWon;
+
+        private Boolean paperGlobal;
+        private Boolean paperRobot;
+        private Boolean rockGlobal;
+        private Boolean rockRobot;
+        private Boolean scissorsGlobal;
+        private Boolean scissorsRobot;
+        private Boolean tieOccured;
+
         public RockPaperScissors()
         {
             InitializeComponent();
         }
 
-        //Variables
-        private Random gen = new Random();
-        private Boolean rockGlobal = false;
-        private Boolean paperGlobal = false;
-        private Boolean scissorsGlobal = false;
-        private Boolean rockRobot = false;
-        private Boolean paperRobot = false;
-        private Boolean scissorsRobot = false;
-        private Boolean humanWon = false;
-        private Boolean tieOccured = false;
-
         public void UpdateButtons()
         {
-            if (rockGlobal == true)
+            if (rockGlobal)
             {
                 rockButton.ForeColor = Color.Green;
                 paperButton.ForeColor = Color.Red;
@@ -34,7 +36,7 @@ namespace Multi_Tool_V3
             }
             else
             {
-                if (paperGlobal == true)
+                if (paperGlobal)
                 {
                     rockButton.ForeColor = Color.Red;
                     paperButton.ForeColor = Color.Green;
@@ -42,7 +44,7 @@ namespace Multi_Tool_V3
                 }
                 else
                 {
-                    if (scissorsGlobal == true)
+                    if (scissorsGlobal)
                     {
                         rockButton.ForeColor = Color.Red;
                         paperButton.ForeColor = Color.Red;
@@ -54,7 +56,7 @@ namespace Multi_Tool_V3
 
         public void RobotChoose()
         {
-            var randomNumber = gen.Next(3);
+            int randomNumber = gen.Next(3);
             switch (randomNumber)
             {
                 case 0:
@@ -63,12 +65,14 @@ namespace Multi_Tool_V3
                     scissorsRobot = false;
                     robotsChoiceDisplay.Text = ("Bot: Rock");
                     break;
+
                 case 1:
                     rockRobot = false;
                     paperRobot = true;
                     scissorsRobot = false;
                     robotsChoiceDisplay.Text = ("Bot: Paper");
                     break;
+
                 case 2:
                     rockRobot = false;
                     paperRobot = false;
@@ -81,21 +85,21 @@ namespace Multi_Tool_V3
         public void WhoWon()
         {
             //Who Won Code
-            if (rockGlobal == true)
+            if (rockGlobal)
             {
-                if (rockRobot == true)
+                if (rockRobot)
                 {
                     tieOccured = true;
                 }
                 else
                 {
-                    if (paperRobot == true)
+                    if (paperRobot)
                     {
                         humanWon = false;
                     }
                     else
                     {
-                        if (scissorsRobot == true)
+                        if (scissorsRobot)
                         {
                             humanWon = true;
                         }
@@ -104,21 +108,21 @@ namespace Multi_Tool_V3
             }
             else
             {
-                if (paperGlobal == true)
+                if (paperGlobal)
                 {
-                    if (paperRobot == true)
+                    if (paperRobot)
                     {
                         tieOccured = true;
                     }
                     else
                     {
-                        if (rockRobot == true)
+                        if (rockRobot)
                         {
                             humanWon = true;
                         }
                         else
                         {
-                            if (scissorsRobot == true)
+                            if (scissorsRobot)
                             {
                                 humanWon = false;
                             }
@@ -127,21 +131,21 @@ namespace Multi_Tool_V3
                 }
                 else
                 {
-                    if (scissorsGlobal == true)
+                    if (scissorsGlobal)
                     {
-                        if (scissorsRobot == true)
+                        if (scissorsRobot)
                         {
                             tieOccured = true;
                         }
                         else
                         {
-                            if (rockRobot == true)
+                            if (rockRobot)
                             {
                                 humanWon = false;
                             }
                             else
                             {
-                                if (paperRobot == true)
+                                if (paperRobot)
                                 {
                                     humanWon = true;
                                 }
@@ -151,9 +155,8 @@ namespace Multi_Tool_V3
                 }
             }
 
-
             //Winner Display Code
-            if (tieOccured == true)
+            if (tieOccured)
             {
                 winnerDisplay.Text = ("Tie Game!");
                 humanWon = false;
@@ -169,6 +172,7 @@ namespace Multi_Tool_V3
                             winnerDisplay.Text = ("You have won!");
                             humanWon = false;
                             break;
+
                         case false:
                             winnerDisplay.Text = ("You have lost!");
                             humanWon = false;
@@ -180,12 +184,12 @@ namespace Multi_Tool_V3
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void RockPaperScissors_Load(object sender, EventArgs e)
         {
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
         }
 

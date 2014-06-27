@@ -17,6 +17,7 @@ namespace Multi_Tool_V3
         {
             InitializeComponent();
         }
+
         public void CheckForText()
         {
             if ((usernameTextBox.Text == ("")) || (passwordTextBox.Text == ("")))
@@ -33,6 +34,7 @@ namespace Multi_Tool_V3
         {
             MessageBox.Show(error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
         public void LoginCheck()
         {
             if ((username == ("xNovax")) && (password == ("password")))

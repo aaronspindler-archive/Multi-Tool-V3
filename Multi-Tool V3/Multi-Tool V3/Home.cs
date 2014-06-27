@@ -15,6 +15,7 @@ namespace Multi_Tool_V3
         {
             InitializeComponent();
         }
+
         private void clearSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Multi_Tool_V3.Properties.Settings.Default.Reset();
@@ -46,6 +47,7 @@ namespace Multi_Tool_V3
             timer.Tick += timer_Tick;
             timer.Start();
         }
+
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var info = new Information();

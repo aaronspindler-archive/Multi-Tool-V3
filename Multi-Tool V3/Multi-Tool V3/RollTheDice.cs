@@ -52,6 +52,7 @@ namespace Multi_Tool_V3
             var username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
         }
+
         private void startingNumberTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             startingNumberTextBox.Text = ("");

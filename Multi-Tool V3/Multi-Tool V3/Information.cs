@@ -95,6 +95,7 @@ namespace Multi_Tool_V3
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
+
         #endregion Assembly Attribute Accessors
 
         private void okButton_Click(object sender, EventArgs e)
