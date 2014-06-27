@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 
 //@author xNovax
@@ -14,7 +15,6 @@ namespace Multi_Tool_V3
 
         //Variables
         private Random gen = new Random();
-
         private Boolean rockGlobal = false;
         private Boolean paperGlobal = false;
         private Boolean scissorsGlobal = false;
@@ -81,21 +81,72 @@ namespace Multi_Tool_V3
         public void WhoWon()
         {
             //Who Won Code
-            if ((rockGlobal == true) && (scissorsRobot == true))
+            if (rockGlobal == true)
             {
-                humanWon = true;
-            }
-            else
-            {
-                if ((paperGlobal == true) && (rockRobot == true))
+                if (rockRobot == true)
                 {
-                    humanWon = true;
+                    tieOccured = true;
                 }
                 else
                 {
-                    if ((scissorsGlobal == true) && (paperRobot == true))
+                    if (paperRobot == true)
                     {
-                        humanWon = true;
+                        humanWon = false;
+                    }
+                    else
+                    {
+                        if (scissorsRobot == true)
+                        {
+                            humanWon = true;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (paperGlobal == true)
+                {
+                    if (paperRobot == true)
+                    {
+                        tieOccured = true;
+                    }
+                    else
+                    {
+                        if (rockRobot == true)
+                        {
+                            humanWon = true;
+                        }
+                        else
+                        {
+                            if (scissorsRobot == true)
+                            {
+                                humanWon = false;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    if (scissorsGlobal == true)
+                    {
+                        if (scissorsRobot == true)
+                        {
+                            tieOccured = true;
+                        }
+                        else
+                        {
+                            if (rockRobot == true)
+                            {
+                                humanWon = false;
+                            }
+                            else
+                            {
+                                if (paperRobot == true)
+                                {
+                                    humanWon = true;
+                                }
+                            }
+                        }
                     }
                 }
             }
