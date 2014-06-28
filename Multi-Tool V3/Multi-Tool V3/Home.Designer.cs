@@ -52,6 +52,7 @@
             this.usernameDisplay = new System.Windows.Forms.Label();
             this.timeDisplay = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.disabledButtonHelpLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -67,19 +68,21 @@
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.usernameDisplay, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.timeDisplay, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.monthCalendar1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.timeDisplay, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.monthCalendar1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.disabledButtonHelpLabel, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(513, 283);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 344);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -92,7 +95,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(256, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(252, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,7 +132,7 @@
             this.converterToolStripMenuItem,
             this.minecraftUserMakerToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.toolsToolStripMenuItem.Text = "Tools";
             // 
             // randomPasswordGeneratorToolStripMenuItem
@@ -155,6 +158,7 @@
             // 
             // converterToolStripMenuItem
             // 
+            this.converterToolStripMenuItem.Enabled = false;
             this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
             this.converterToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.converterToolStripMenuItem.Text = "Converter";
@@ -172,7 +176,7 @@
             this.gamesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rockPaperScissorsToolStripMenuItem});
             this.gamesToolStripMenuItem.Name = "gamesToolStripMenuItem";
-            this.gamesToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.gamesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gamesToolStripMenuItem.Text = "Games";
             // 
             // rockPaperScissorsToolStripMenuItem
@@ -201,7 +205,7 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
@@ -210,13 +214,13 @@
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearSettingsToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // clearSettingsToolStripMenuItem
             // 
             this.clearSettingsToolStripMenuItem.Name = "clearSettingsToolStripMenuItem";
-            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clearSettingsToolStripMenuItem.Text = "Clear Settings";
             this.clearSettingsToolStripMenuItem.Click += new System.EventHandler(this.clearSettingsToolStripMenuItem_Click);
             // 
@@ -229,7 +233,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(3, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(507, 58);
+            this.label1.Size = new System.Drawing.Size(500, 67);
             this.label1.TabIndex = 1;
             this.label1.Text = "xNovax\'s Multi-Tool Program";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,9 +244,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.usernameDisplay, 2);
             this.usernameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameDisplay.ForeColor = System.Drawing.Color.DarkRed;
-            this.usernameDisplay.Location = new System.Drawing.Point(259, 0);
+            this.usernameDisplay.Location = new System.Drawing.Point(255, 0);
             this.usernameDisplay.Name = "usernameDisplay";
-            this.usernameDisplay.Size = new System.Drawing.Size(251, 25);
+            this.usernameDisplay.Size = new System.Drawing.Size(248, 25);
             this.usernameDisplay.TabIndex = 2;
             this.usernameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -251,9 +255,9 @@
             this.timeDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.timeDisplay, 4);
             this.timeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeDisplay.Location = new System.Drawing.Point(3, 257);
+            this.timeDisplay.Location = new System.Drawing.Point(3, 319);
             this.timeDisplay.Name = "timeDisplay";
-            this.timeDisplay.Size = new System.Drawing.Size(507, 26);
+            this.timeDisplay.Size = new System.Drawing.Size(500, 25);
             this.timeDisplay.TabIndex = 1;
             this.timeDisplay.Text = "Your watch must be broken.";
             this.timeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -262,9 +266,23 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.monthCalendar1, 2);
             this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(137, 92);
+            this.monthCalendar1.Location = new System.Drawing.Point(135, 127);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
+            // 
+            // disabledButtonHelpLabel
+            // 
+            this.disabledButtonHelpLabel.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.disabledButtonHelpLabel, 4);
+            this.disabledButtonHelpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.disabledButtonHelpLabel.Location = new System.Drawing.Point(2, 92);
+            this.disabledButtonHelpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.disabledButtonHelpLabel.Name = "disabledButtonHelpLabel";
+            this.disabledButtonHelpLabel.Size = new System.Drawing.Size(502, 26);
+            this.disabledButtonHelpLabel.TabIndex = 4;
+            this.disabledButtonHelpLabel.Text = "If a menu button is blacked out/disabled it is because that program is a work in " +
+    "progress";
+            this.disabledButtonHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer
             // 
@@ -275,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 283);
+            this.ClientSize = new System.Drawing.Size(506, 344);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -317,5 +335,6 @@
         private System.Windows.Forms.ToolStripMenuItem minecraftUserMakerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem debugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearSettingsToolStripMenuItem;
+        private System.Windows.Forms.Label disabledButtonHelpLabel;
     }
 }

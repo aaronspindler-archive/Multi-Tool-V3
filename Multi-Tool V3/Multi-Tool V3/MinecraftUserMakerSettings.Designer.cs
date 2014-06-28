@@ -72,17 +72,17 @@
             this.tableLayoutPanel1.Controls.Add(this.ftpPortTextBox, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(464, 172);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 331);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // passwordLengthLabel
@@ -90,9 +90,10 @@
             this.passwordLengthLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.passwordLengthLabel, 2);
             this.passwordLengthLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordLengthLabel.Location = new System.Drawing.Point(3, 74);
+            this.passwordLengthLabel.Location = new System.Drawing.Point(6, 142);
+            this.passwordLengthLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.passwordLengthLabel.Name = "passwordLengthLabel";
-            this.passwordLengthLabel.Size = new System.Drawing.Size(110, 24);
+            this.passwordLengthLabel.Size = new System.Drawing.Size(220, 46);
             this.passwordLengthLabel.TabIndex = 1;
             this.passwordLengthLabel.Text = "Password Length: ";
             this.passwordLengthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,10 +103,10 @@
             this.passwordTypeLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.passwordTypeLabel, 2);
             this.passwordTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordTypeLabel.Location = new System.Drawing.Point(2, 98);
-            this.passwordTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.passwordTypeLabel.Location = new System.Drawing.Point(4, 188);
+            this.passwordTypeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordTypeLabel.Name = "passwordTypeLabel";
-            this.passwordTypeLabel.Size = new System.Drawing.Size(112, 24);
+            this.passwordTypeLabel.Size = new System.Drawing.Size(224, 46);
             this.passwordTypeLabel.TabIndex = 1;
             this.passwordTypeLabel.Text = "Password Type: ";
             this.passwordTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,10 +117,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.usernameDisplay, 4);
             this.usernameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameDisplay.ForeColor = System.Drawing.Color.DarkRed;
-            this.usernameDisplay.Location = new System.Drawing.Point(234, 0);
-            this.usernameDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.usernameDisplay.Location = new System.Drawing.Point(468, 0);
+            this.usernameDisplay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameDisplay.Name = "usernameDisplay";
-            this.usernameDisplay.Size = new System.Drawing.Size(228, 26);
+            this.usernameDisplay.Size = new System.Drawing.Size(456, 50);
             this.usernameDisplay.TabIndex = 1;
             this.usernameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -131,8 +132,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(232, 26);
+            this.menuStrip1.Size = new System.Drawing.Size(464, 50);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,20 +142,20 @@
             this.saveToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 46);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(140, 36);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -169,10 +169,10 @@
             "Letters (Uppercase and Lowercase)",
             "Numbers and Letters (Uppercase and Lowercase)",
             "All Characters (Numbers, Letters, and Special Characters)"});
-            this.passwordTypeCombo.Location = new System.Drawing.Point(118, 100);
-            this.passwordTypeCombo.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTypeCombo.Location = new System.Drawing.Point(236, 192);
+            this.passwordTypeCombo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.passwordTypeCombo.Name = "passwordTypeCombo";
-            this.passwordTypeCombo.Size = new System.Drawing.Size(344, 21);
+            this.passwordTypeCombo.Size = new System.Drawing.Size(688, 33);
             this.passwordTypeCombo.TabIndex = 2;
             this.passwordTypeCombo.SelectedIndexChanged += new System.EventHandler(this.passwordTypeCombo_SelectedIndexChanged);
             // 
@@ -180,9 +180,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.passwordLengthTextBox, 6);
             this.passwordLengthTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.passwordLengthTextBox.Location = new System.Drawing.Point(119, 77);
+            this.passwordLengthTextBox.Location = new System.Drawing.Point(238, 148);
+            this.passwordLengthTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.passwordLengthTextBox.Name = "passwordLengthTextBox";
-            this.passwordLengthTextBox.Size = new System.Drawing.Size(342, 20);
+            this.passwordLengthTextBox.Size = new System.Drawing.Size(684, 31);
             this.passwordLengthTextBox.TabIndex = 3;
             this.passwordLengthTextBox.Text = "Default: 8";
             this.passwordLengthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -193,10 +194,11 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.saveSettingsButton, 2);
             this.saveSettingsButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveSettingsButton.Location = new System.Drawing.Point(177, 125);
+            this.saveSettingsButton.Location = new System.Drawing.Point(354, 240);
+            this.saveSettingsButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.saveSettingsButton.Name = "saveSettingsButton";
             this.tableLayoutPanel1.SetRowSpan(this.saveSettingsButton, 2);
-            this.saveSettingsButton.Size = new System.Drawing.Size(110, 44);
+            this.saveSettingsButton.Size = new System.Drawing.Size(220, 85);
             this.saveSettingsButton.TabIndex = 4;
             this.saveSettingsButton.Text = "Save Settings";
             this.saveSettingsButton.UseVisualStyleBackColor = true;
@@ -207,10 +209,10 @@
             this.serverRootIpLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.serverRootIpLabel, 2);
             this.serverRootIpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.serverRootIpLabel.Location = new System.Drawing.Point(2, 26);
-            this.serverRootIpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.serverRootIpLabel.Location = new System.Drawing.Point(4, 50);
+            this.serverRootIpLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.serverRootIpLabel.Name = "serverRootIpLabel";
-            this.serverRootIpLabel.Size = new System.Drawing.Size(112, 24);
+            this.serverRootIpLabel.Size = new System.Drawing.Size(224, 46);
             this.serverRootIpLabel.TabIndex = 5;
             this.serverRootIpLabel.Text = "Root Server IP: ";
             this.serverRootIpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -219,10 +221,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.rootServerIPTextBox, 6);
             this.rootServerIPTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootServerIPTextBox.Location = new System.Drawing.Point(118, 28);
-            this.rootServerIPTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.rootServerIPTextBox.Location = new System.Drawing.Point(236, 54);
+            this.rootServerIPTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rootServerIPTextBox.Name = "rootServerIPTextBox";
-            this.rootServerIPTextBox.Size = new System.Drawing.Size(344, 20);
+            this.rootServerIPTextBox.Size = new System.Drawing.Size(688, 31);
             this.rootServerIPTextBox.TabIndex = 6;
             this.rootServerIPTextBox.Text = "Example: 255.255.25.25";
             this.rootServerIPTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -234,9 +236,10 @@
             this.ftpPortLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.ftpPortLabel, 2);
             this.ftpPortLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ftpPortLabel.Location = new System.Drawing.Point(3, 50);
+            this.ftpPortLabel.Location = new System.Drawing.Point(6, 96);
+            this.ftpPortLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ftpPortLabel.Name = "ftpPortLabel";
-            this.ftpPortLabel.Size = new System.Drawing.Size(110, 24);
+            this.ftpPortLabel.Size = new System.Drawing.Size(220, 46);
             this.ftpPortLabel.TabIndex = 7;
             this.ftpPortLabel.Text = "FTP Port: ";
             this.ftpPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,9 +248,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.ftpPortTextBox, 6);
             this.ftpPortTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ftpPortTextBox.Location = new System.Drawing.Point(119, 53);
+            this.ftpPortTextBox.Location = new System.Drawing.Point(238, 102);
+            this.ftpPortTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.ftpPortTextBox.Name = "ftpPortTextBox";
-            this.ftpPortTextBox.Size = new System.Drawing.Size(342, 20);
+            this.ftpPortTextBox.Size = new System.Drawing.Size(684, 31);
             this.ftpPortTextBox.TabIndex = 8;
             this.ftpPortTextBox.Text = "Example : 8821";
             this.ftpPortTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -256,13 +260,13 @@
             // 
             // MinecraftUserMakerSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 172);
+            this.ClientSize = new System.Drawing.Size(928, 331);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MinecraftUserMakerSettings";
             this.Text = "Minecraft User Maker Settings";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MinecraftUserMakerSettings_FormClosing);
