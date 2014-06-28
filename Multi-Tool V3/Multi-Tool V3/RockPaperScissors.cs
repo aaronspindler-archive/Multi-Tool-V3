@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Multi_Tool_V3.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -11,6 +11,7 @@ namespace Multi_Tool_V3
     {
         //Variables
         private readonly Random gen = new Random();
+
         private Boolean humanWon;
 
         private Boolean paperGlobal;

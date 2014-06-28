@@ -110,7 +110,6 @@ namespace Multi_Tool_V3
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Converter_Load(object sender, EventArgs e)
@@ -136,7 +135,6 @@ namespace Multi_Tool_V3
 
         private void toComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
         }
     }
 }
