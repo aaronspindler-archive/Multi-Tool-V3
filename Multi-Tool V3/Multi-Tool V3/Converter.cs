@@ -8,16 +8,19 @@ namespace Multi_Tool_V3
 {
     public partial class Converter : Form
     {
-        private int fromSelected = 0;
         private UsefulCode uc = new UsefulCode();
+        private int fromSelected;
+        private int toSelected;
+        private int fromValue;
 
         public Converter()
         {
             InitializeComponent();
         }
 
-        public void SetItems()
+        private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            toComboBox.Items.Clear();
             if (fromComboBox.SelectedIndex == 0)
             {
                 fromSelected = 0;
@@ -94,6 +97,17 @@ namespace Multi_Tool_V3
                                                             {
                                                                 fromSelected = 12;
                                                             }
+                                                            else
+                                                            {
+                                                                if (fromComboBox.SelectedIndex == 13)
+                                                                {
+                                                                    fromSelected = 13;
+                                                                }
+                                                                else
+                                                                {
+
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -108,8 +122,12 @@ namespace Multi_Tool_V3
             }
         }
 
-        private void convertButton_Click(object sender, EventArgs e)
+        private void toComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (toComboBox.SelectedIndex == 0)
+            {
+                toSelected = 0;
+            }
         }
 
         private void Converter_Load(object sender, EventArgs e)
@@ -118,23 +136,22 @@ namespace Multi_Tool_V3
             usernameDisplay.Text = ("Logged in as: " + username);
         }
 
+        private void fromValueTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (fromValueTextBox.Text != (""))
+            {
+                fromValue = Convert.ToInt32(fromValueTextBox.Text);
+            }
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetItems();
-        }
-
         private void fromValueTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             fromValueTextBox.Text = ("");
-        }
-
-        private void toComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
         }
     }
 }

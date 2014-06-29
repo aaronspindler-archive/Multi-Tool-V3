@@ -12,17 +12,17 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://ftp.xnovax.net//public_html/program_files/multi-tool-v3/1.0.0.0/</PublishUrl>
+    <PublishUrl>ftp://ftp.xnovax.net//public_html/program_files/multi-tool-v3/latest/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>1</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://www.xnovax.net/program_files/multi-tool-v3/1.0.0.0/</InstallUrl>
+    <InstallUrl>https://www.xnovax.net/program_files/multi-tool-v3/latest/</InstallUrl>
     <SupportUrl>http://www.xNovax.net/</SupportUrl>
     <ErrorReportUrl>http://www.xNovax.net/</ErrorReportUrl>
     <ProductName>Multi-Tool V3</ProductName>

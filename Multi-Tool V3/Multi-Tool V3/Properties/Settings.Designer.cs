@@ -25,7 +25,7 @@ namespace Multi_Tool_V3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Bob")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Fred")]
         public string username {
             get {
                 return ((string)(this["username"]));
@@ -85,7 +85,7 @@ namespace Multi_Tool_V3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        [global::System.Configuration.DefaultSettingValueAttribute("16")]
         public int minecraftPasswordLength {
             get {
                 return ((int)(this["minecraftPasswordLength"]));
@@ -121,7 +121,7 @@ namespace Multi_Tool_V3.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("8821")]
+        [global::System.Configuration.DefaultSettingValueAttribute("21")]
         public string minecraftFtpPort {
             get {
                 return ((string)(this["minecraftFtpPort"]));

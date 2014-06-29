@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Bob</Value>
+      <Value Profile="(Default)">Fred</Value>
     </Setting>
     <Setting Name="randomPasswordSetting" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
@@ -18,7 +18,7 @@
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="minecraftPasswordLength" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">8</Value>
+      <Value Profile="(Default)">16</Value>
     </Setting>
     <Setting Name="minecraftPasswordType" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
@@ -27,7 +27,7 @@
       <Value Profile="(Default)">192.168.1.1</Value>
     </Setting>
     <Setting Name="minecraftFtpPort" Type="System.String" Scope="User">
-      <Value Profile="(Default)">8821</Value>
+      <Value Profile="(Default)">21</Value>
     </Setting>
   </Settings>
 </SettingsFile>

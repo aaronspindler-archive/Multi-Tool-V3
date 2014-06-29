@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 344);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(506, 306);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -158,7 +158,6 @@
             // 
             // converterToolStripMenuItem
             // 
-            this.converterToolStripMenuItem.Enabled = false;
             this.converterToolStripMenuItem.Name = "converterToolStripMenuItem";
             this.converterToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.converterToolStripMenuItem.Text = "Converter";
@@ -205,7 +204,7 @@
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.informationToolStripMenuItem.Text = "Information";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
@@ -214,13 +213,13 @@
             this.debugToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearSettingsToolStripMenuItem});
             this.debugToolStripMenuItem.Name = "debugToolStripMenuItem";
-            this.debugToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.debugToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.debugToolStripMenuItem.Text = "Debug";
             // 
             // clearSettingsToolStripMenuItem
             // 
             this.clearSettingsToolStripMenuItem.Name = "clearSettingsToolStripMenuItem";
-            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clearSettingsToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.clearSettingsToolStripMenuItem.Text = "Clear Settings";
             this.clearSettingsToolStripMenuItem.Click += new System.EventHandler(this.clearSettingsToolStripMenuItem_Click);
             // 
@@ -233,7 +232,7 @@
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(3, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(500, 67);
+            this.label1.Size = new System.Drawing.Size(500, 57);
             this.label1.TabIndex = 1;
             this.label1.Text = "xNovax\'s Multi-Tool Program";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,9 +254,9 @@
             this.timeDisplay.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.timeDisplay, 4);
             this.timeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeDisplay.Location = new System.Drawing.Point(3, 319);
+            this.timeDisplay.Location = new System.Drawing.Point(3, 279);
             this.timeDisplay.Name = "timeDisplay";
-            this.timeDisplay.Size = new System.Drawing.Size(500, 25);
+            this.timeDisplay.Size = new System.Drawing.Size(500, 27);
             this.timeDisplay.TabIndex = 1;
             this.timeDisplay.Text = "Your watch must be broken.";
             this.timeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -266,7 +265,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.monthCalendar1, 2);
             this.monthCalendar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monthCalendar1.Location = new System.Drawing.Point(135, 127);
+            this.monthCalendar1.Location = new System.Drawing.Point(135, 117);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             // 
@@ -275,7 +274,7 @@
             this.disabledButtonHelpLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.disabledButtonHelpLabel, 4);
             this.disabledButtonHelpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.disabledButtonHelpLabel.Location = new System.Drawing.Point(2, 92);
+            this.disabledButtonHelpLabel.Location = new System.Drawing.Point(2, 82);
             this.disabledButtonHelpLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.disabledButtonHelpLabel.Name = "disabledButtonHelpLabel";
             this.disabledButtonHelpLabel.Size = new System.Drawing.Size(502, 26);
@@ -293,7 +292,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 344);
+            this.ClientSize = new System.Drawing.Size(506, 306);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
