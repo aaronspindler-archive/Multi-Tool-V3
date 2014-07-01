@@ -1,6 +1,6 @@
-﻿using Multi_Tool_V3.Properties;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -8,10 +8,10 @@ namespace Multi_Tool_V3
 {
     public partial class Converter : Form
     {
-        private UsefulCode uc = new UsefulCode();
+        private readonly UsefulCode uc = new UsefulCode();
         private int fromSelected;
-        private int toSelected;
         private int fromValue;
+        private int toSelected;
 
         public Converter()
         {
@@ -21,7 +21,6 @@ namespace Multi_Tool_V3
         private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             toComboBox.Items.Clear();
-
             if (fromComboBox.SelectedIndex == 0)
             {
                 fromSelected = 0;
@@ -106,7 +105,7 @@ namespace Multi_Tool_V3
                                                                 }
                                                                 else
                                                                 {
-
+                                                                    uc.ErrorOccured("You have selected an option that does not exist.");
                                                                 }
                                                             }
                                                         }
@@ -129,29 +128,21 @@ namespace Multi_Tool_V3
             {
                 if (toComboBox.SelectedIndex == 0)
                 {
-                    
                 }
                 else
                 {
                     if (toComboBox.SelectedIndex == 1)
                     {
-                        
                     }
                     else
                     {
                         if (toComboBox.SelectedIndex == 2)
                         {
-                            
                         }
                         else
                         {
                             if (toComboBox.SelectedIndex == 3)
                             {
-                                
-                            }
-                            else
-                            {
-                                
                             }
                         }
                     }
@@ -161,41 +152,161 @@ namespace Multi_Tool_V3
             {
                 if (fromSelected == 1)
                 {
-                    
+                    if (toComboBox.SelectedIndex == 0)
+                    {
+                    }
+                    else
+                    {
+                        if (toComboBox.SelectedIndex == 1)
+                        {
+                        }
+                        else
+                        {
+                            if (toComboBox.SelectedIndex == 2)
+                            {
+                            }
+                            else
+                            {
+                                if (toComboBox.SelectedIndex == 3)
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
                 else
                 {
                     if (fromSelected == 2)
                     {
-                        
+                        if (toComboBox.SelectedIndex == 0)
+                        {
+                        }
+                        else
+                        {
+                            if (toComboBox.SelectedIndex == 1)
+                            {
+                            }
+                            else
+                            {
+                                if (toComboBox.SelectedIndex == 2)
+                                {
+                                }
+                                else
+                                {
+                                    if (toComboBox.SelectedIndex == 3)
+                                    {
+                                    }
+                                }
+                            }
+                        }
                     }
                     else
                     {
                         if (fromSelected == 3)
                         {
-                            
+                            if (toComboBox.SelectedIndex == 0)
+                            {
+                            }
+                            else
+                            {
+                                if (toComboBox.SelectedIndex == 1)
+                                {
+                                }
+                                else
+                                {
+                                    if (toComboBox.SelectedIndex == 2)
+                                    {
+                                    }
+                                    else
+                                    {
+                                        if (toComboBox.SelectedIndex == 3)
+                                        {
+                                        }
+                                    }
+                                }
+                            }
                         }
                         else
                         {
                             if (fromSelected == 4)
                             {
-                                
+                                if (toComboBox.SelectedIndex == 0)
+                                {
+                                }
+                                else
+                                {
+                                    if (toComboBox.SelectedIndex == 1)
+                                    {
+                                    }
+                                    else
+                                    {
+                                        if (toComboBox.SelectedIndex == 2)
+                                        {
+                                        }
+                                        else
+                                        {
+                                            if (toComboBox.SelectedIndex == 3)
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
                             }
                             else
                             {
                                 if (fromSelected == 5)
                                 {
-                                    
+                                    if (toComboBox.SelectedIndex == 0)
+                                    {
+                                    }
+                                    else
+                                    {
+                                        if (toComboBox.SelectedIndex == 1)
+                                        {
+                                        }
+                                        else
+                                        {
+                                            if (toComboBox.SelectedIndex == 2)
+                                            {
+                                            }
+                                            else
+                                            {
+                                                if (toComboBox.SelectedIndex == 3)
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                                 else
                                 {
                                     if (fromSelected == 6)
                                     {
-                                        
+                                        if (toComboBox.SelectedIndex == 0)
+                                        {
+                                        }
+                                        else
+                                        {
+                                            if (toComboBox.SelectedIndex == 1)
+                                            {
+                                            }
+                                            else
+                                            {
+                                                if (toComboBox.SelectedIndex == 2)
+                                                {
+                                                }
+                                                else
+                                                {
+                                                    if (toComboBox.SelectedIndex == 3)
+                                                    {
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                     else
                                     {
-                                        
+                                        uc.ErrorOccured("You have selected an option that does not exist.");
                                     }
                                 }
                             }
