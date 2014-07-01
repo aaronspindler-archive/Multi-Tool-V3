@@ -21,6 +21,7 @@ namespace Multi_Tool_V3
         private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             toComboBox.Items.Clear();
+
             if (fromComboBox.SelectedIndex == 0)
             {
                 fromSelected = 0;
@@ -124,9 +125,83 @@ namespace Multi_Tool_V3
 
         private void toComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (toComboBox.SelectedIndex == 0)
+            if (fromSelected == 0)
             {
-                toSelected = 0;
+                if (toComboBox.SelectedIndex == 0)
+                {
+                    
+                }
+                else
+                {
+                    if (toComboBox.SelectedIndex == 1)
+                    {
+                        
+                    }
+                    else
+                    {
+                        if (toComboBox.SelectedIndex == 2)
+                        {
+                            
+                        }
+                        else
+                        {
+                            if (toComboBox.SelectedIndex == 3)
+                            {
+                                
+                            }
+                            else
+                            {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (fromSelected == 1)
+                {
+                    
+                }
+                else
+                {
+                    if (fromSelected == 2)
+                    {
+                        
+                    }
+                    else
+                    {
+                        if (fromSelected == 3)
+                        {
+                            
+                        }
+                        else
+                        {
+                            if (fromSelected == 4)
+                            {
+                                
+                            }
+                            else
+                            {
+                                if (fromSelected == 5)
+                                {
+                                    
+                                }
+                                else
+                                {
+                                    if (fromSelected == 6)
+                                    {
+                                        
+                                    }
+                                    else
+                                    {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 

@@ -92,6 +92,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.convertedValueTextBox, 2);
             this.convertedValueTextBox.Size = new System.Drawing.Size(374, 48);
             this.convertedValueTextBox.TabIndex = 1;
+            this.convertedValueTextBox.Text = "0";
             this.convertedValueTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fromValueTextBox
