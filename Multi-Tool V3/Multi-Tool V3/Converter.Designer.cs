@@ -67,18 +67,19 @@
             this.tableLayoutPanel1.Controls.Add(this.fromTextLabel, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 119);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(756, 229);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // convertedValueTextBox
@@ -86,11 +87,11 @@
             this.convertedValueTextBox.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.convertedValueTextBox, 8);
             this.convertedValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.convertedValueTextBox.Location = new System.Drawing.Point(2, 71);
-            this.convertedValueTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.convertedValueTextBox.Location = new System.Drawing.Point(4, 138);
+            this.convertedValueTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.convertedValueTextBox.Name = "convertedValueTextBox";
             this.tableLayoutPanel1.SetRowSpan(this.convertedValueTextBox, 2);
-            this.convertedValueTextBox.Size = new System.Drawing.Size(374, 48);
+            this.convertedValueTextBox.Size = new System.Drawing.Size(748, 91);
             this.convertedValueTextBox.TabIndex = 1;
             this.convertedValueTextBox.Text = "0";
             this.convertedValueTextBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +100,10 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.fromValueTextBox, 4);
             this.fromValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fromValueTextBox.Location = new System.Drawing.Point(190, 50);
-            this.fromValueTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.fromValueTextBox.Location = new System.Drawing.Point(380, 97);
+            this.fromValueTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fromValueTextBox.Name = "fromValueTextBox";
-            this.fromValueTextBox.Size = new System.Drawing.Size(186, 20);
+            this.fromValueTextBox.Size = new System.Drawing.Size(372, 31);
             this.fromValueTextBox.TabIndex = 1;
             this.fromValueTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.fromValueTextBox_MouseClick);
             this.fromValueTextBox.TextChanged += new System.EventHandler(this.fromValueTextBox_TextChanged);
@@ -113,9 +114,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.usernameDisplay, 3);
             this.usernameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameDisplay.ForeColor = System.Drawing.Color.DarkRed;
-            this.usernameDisplay.Location = new System.Drawing.Point(238, 0);
+            this.usernameDisplay.Location = new System.Drawing.Point(476, 0);
+            this.usernameDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameDisplay.Name = "usernameDisplay";
-            this.usernameDisplay.Size = new System.Drawing.Size(137, 25);
+            this.usernameDisplay.Size = new System.Drawing.Size(274, 48);
             this.usernameDisplay.TabIndex = 1;
             this.usernameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -127,7 +129,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(235, 25);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip.Size = new System.Drawing.Size(470, 48);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -136,13 +139,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 21);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 40);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -177,9 +180,10 @@
             "GBP",
             "Bitcoin",
             "Litecoin"});
-            this.fromComboBox.Location = new System.Drawing.Point(50, 28);
+            this.fromComboBox.Location = new System.Drawing.Point(100, 54);
+            this.fromComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.fromComboBox.Name = "fromComboBox";
-            this.fromComboBox.Size = new System.Drawing.Size(135, 21);
+            this.fromComboBox.Size = new System.Drawing.Size(270, 33);
             this.fromComboBox.TabIndex = 1;
             this.fromComboBox.SelectedIndexChanged += new System.EventHandler(this.fromComboBox_SelectedIndexChanged);
             // 
@@ -188,9 +192,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.toComboBox, 3);
             this.toComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toComboBox.FormattingEnabled = true;
-            this.toComboBox.Location = new System.Drawing.Point(238, 28);
+            this.toComboBox.Location = new System.Drawing.Point(476, 54);
+            this.toComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.toComboBox.Name = "toComboBox";
-            this.toComboBox.Size = new System.Drawing.Size(137, 21);
+            this.toComboBox.Size = new System.Drawing.Size(274, 33);
             this.toComboBox.TabIndex = 2;
             this.toComboBox.SelectedIndexChanged += new System.EventHandler(this.toComboBox_SelectedIndexChanged);
             // 
@@ -198,9 +203,10 @@
             // 
             this.typeFromLabel.AutoSize = true;
             this.typeFromLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.typeFromLabel.Location = new System.Drawing.Point(3, 25);
+            this.typeFromLabel.Location = new System.Drawing.Point(6, 48);
+            this.typeFromLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.typeFromLabel.Name = "typeFromLabel";
-            this.typeFromLabel.Size = new System.Drawing.Size(41, 23);
+            this.typeFromLabel.Size = new System.Drawing.Size(82, 45);
             this.typeFromLabel.TabIndex = 3;
             this.typeFromLabel.Text = "From: ";
             this.typeFromLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,9 +215,10 @@
             // 
             this.typeToLabel.AutoSize = true;
             this.typeToLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.typeToLabel.Location = new System.Drawing.Point(191, 25);
+            this.typeToLabel.Location = new System.Drawing.Point(382, 48);
+            this.typeToLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.typeToLabel.Name = "typeToLabel";
-            this.typeToLabel.Size = new System.Drawing.Size(41, 23);
+            this.typeToLabel.Size = new System.Drawing.Size(82, 45);
             this.typeToLabel.TabIndex = 4;
             this.typeToLabel.Text = "To: ";
             this.typeToLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,23 +228,24 @@
             this.fromTextLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.fromTextLabel, 4);
             this.fromTextLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fromTextLabel.Location = new System.Drawing.Point(2, 48);
-            this.fromTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fromTextLabel.Location = new System.Drawing.Point(4, 93);
+            this.fromTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fromTextLabel.Name = "fromTextLabel";
-            this.fromTextLabel.Size = new System.Drawing.Size(184, 23);
+            this.fromTextLabel.Size = new System.Drawing.Size(368, 45);
             this.fromTextLabel.TabIndex = 5;
             this.fromTextLabel.Text = "Enter the value to convert: ";
             this.fromTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Converter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 119);
+            this.ClientSize = new System.Drawing.Size(756, 229);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Converter";
             this.Text = "Converter";
             this.Load += new System.EventHandler(this.Converter_Load);

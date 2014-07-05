@@ -10,7 +10,7 @@ namespace Multi_Tool_V3
     {
         private readonly UsefulCode uc = new UsefulCode();
         private int fromSelected;
-        private int fromValue;
+        private double fromValue;
         private int toSelected;
 
         public Converter()
@@ -324,9 +324,9 @@ namespace Multi_Tool_V3
 
         private void fromValueTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (fromValueTextBox.Text != (""))
+            if ((fromValueTextBox.Text != (""))||((fromValueTextBox.Text != ("0"))||(fromValueTextBox.Text != ("0.0"))))
             {
-                fromValue = Convert.ToInt32(fromValueTextBox.Text);
+                fromValue = Convert.ToDouble(fromValueTextBox.Text);
             }
         }
 
