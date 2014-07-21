@@ -67,7 +67,7 @@
             this.tableLayoutPanel1.Controls.Add(this.fromTextLabel, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
@@ -101,7 +101,7 @@
             this.tableLayoutPanel1.SetColumnSpan(this.fromValueTextBox, 4);
             this.fromValueTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fromValueTextBox.Location = new System.Drawing.Point(380, 97);
-            this.fromValueTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fromValueTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.fromValueTextBox.Name = "fromValueTextBox";
             this.fromValueTextBox.Size = new System.Drawing.Size(372, 31);
             this.fromValueTextBox.TabIndex = 1;
@@ -181,7 +181,7 @@
             "Bitcoin",
             "Litecoin"});
             this.fromComboBox.Location = new System.Drawing.Point(100, 54);
-            this.fromComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fromComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.fromComboBox.Name = "fromComboBox";
             this.fromComboBox.Size = new System.Drawing.Size(270, 33);
             this.fromComboBox.TabIndex = 1;
@@ -193,7 +193,7 @@
             this.toComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toComboBox.FormattingEnabled = true;
             this.toComboBox.Location = new System.Drawing.Point(476, 54);
-            this.toComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.toComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.toComboBox.Name = "toComboBox";
             this.toComboBox.Size = new System.Drawing.Size(274, 33);
             this.toComboBox.TabIndex = 2;
@@ -245,7 +245,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Converter";
             this.Text = "Converter";
             this.Load += new System.EventHandler(this.Converter_Load);
