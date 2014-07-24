@@ -14,5 +14,15 @@ namespace Multi_Tool_V3
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            usernameTextBox.Text = ("");
+        }
     }
 }

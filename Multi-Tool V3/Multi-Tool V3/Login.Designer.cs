@@ -52,7 +52,7 @@
             this.tableLayoutPanel.Controls.Add(this.passwordTextBox, 1, 1);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 3;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -65,7 +65,7 @@
             // 
             this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameTextBox.Location = new System.Drawing.Point(233, 6);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(215, 31);
             this.usernameTextBox.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             this.createNewUserButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.createNewUserButton.Location = new System.Drawing.Point(6, 106);
-            this.createNewUserButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.createNewUserButton.Margin = new System.Windows.Forms.Padding(6);
             this.createNewUserButton.Name = "createNewUserButton";
             this.createNewUserButton.Size = new System.Drawing.Size(215, 40);
             this.createNewUserButton.TabIndex = 4;
@@ -111,7 +111,7 @@
             // 
             this.loginButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginButton.Location = new System.Drawing.Point(233, 106);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.loginButton.Margin = new System.Windows.Forms.Padding(6);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(215, 40);
             this.loginButton.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             this.passwordTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.passwordTextBox.Location = new System.Drawing.Point(233, 56);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(215, 31);
             this.passwordTextBox.TabIndex = 2;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.tableLayoutPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

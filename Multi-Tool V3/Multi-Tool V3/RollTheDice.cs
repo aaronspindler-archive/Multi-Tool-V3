@@ -43,7 +43,7 @@ namespace Multi_Tool_V3
             rolledNumber = gen.Next(difference) + startingNumber;
             randomNumberLabel.Text = Convert.ToString(rolledNumber);
             Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls =
-                Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls + 1;
+            Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls + 1;
             Multi_Tool_V3.Properties.Settings.Default.Save();
         }
 
