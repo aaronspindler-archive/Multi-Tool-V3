@@ -59,10 +59,10 @@
             this.tableLayoutPanel1.Controls.Add(this.usernameAvailabilityLabel, 4, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -71,31 +71,32 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(379, 238);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(758, 458);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // usernameTextBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.usernameTextBox, 4);
             this.usernameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameTextBox.Location = new System.Drawing.Point(190, 28);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.usernameTextBox.Location = new System.Drawing.Point(380, 54);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(187, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(374, 31);
             this.usernameTextBox.TabIndex = 1;
             this.usernameTextBox.Text = "Example : xNovax";
             this.usernameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.usernameTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.usernameTextBox_MouseClick);
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.usernameLabel, 4);
             this.usernameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameLabel.Location = new System.Drawing.Point(2, 26);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.usernameLabel.Location = new System.Drawing.Point(4, 50);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(184, 26);
+            this.usernameLabel.Size = new System.Drawing.Size(368, 51);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "Enter a username you would like : ";
             this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,8 +108,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(379, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(758, 40);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,13 +117,13 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 22);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -131,35 +131,36 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.checkAvailabilityUsernameButton, 4);
             this.checkAvailabilityUsernameButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkAvailabilityUsernameButton.Location = new System.Drawing.Point(2, 54);
-            this.checkAvailabilityUsernameButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkAvailabilityUsernameButton.Location = new System.Drawing.Point(4, 105);
+            this.checkAvailabilityUsernameButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkAvailabilityUsernameButton.Name = "checkAvailabilityUsernameButton";
-            this.checkAvailabilityUsernameButton.Size = new System.Drawing.Size(184, 22);
+            this.checkAvailabilityUsernameButton.Size = new System.Drawing.Size(368, 43);
             this.checkAvailabilityUsernameButton.TabIndex = 2;
             this.checkAvailabilityUsernameButton.Text = "Check Username Availability";
             this.checkAvailabilityUsernameButton.UseVisualStyleBackColor = true;
+            this.checkAvailabilityUsernameButton.Click += new System.EventHandler(this.checkAvailabilityUsernameButton_Click);
             // 
             // usernameAvailabilityLabel
             // 
             this.usernameAvailabilityLabel.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.usernameAvailabilityLabel, 4);
             this.usernameAvailabilityLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.usernameAvailabilityLabel.Location = new System.Drawing.Point(190, 52);
-            this.usernameAvailabilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.usernameAvailabilityLabel.Location = new System.Drawing.Point(380, 101);
+            this.usernameAvailabilityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameAvailabilityLabel.Name = "usernameAvailabilityLabel";
-            this.usernameAvailabilityLabel.Size = new System.Drawing.Size(187, 26);
+            this.usernameAvailabilityLabel.Size = new System.Drawing.Size(374, 51);
             this.usernameAvailabilityLabel.TabIndex = 3;
             this.usernameAvailabilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CreateUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 238);
+            this.ClientSize = new System.Drawing.Size(758, 458);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateUser";
             this.Text = "Create User";
             this.Load += new System.EventHandler(this.CreateUser_Load);
