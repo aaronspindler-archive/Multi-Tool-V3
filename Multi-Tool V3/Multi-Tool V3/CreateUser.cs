@@ -40,5 +40,20 @@ namespace Multi_Tool_V3
                 username = usernameTextBox.Text;
             }
         }
+
+        private void password1TextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            password1TextBox.Text = ("");
+        }
+
+        private void password2TextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            password2TextBox.Text = ("");
+        }
+
+        private void createUserButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,8 +57,8 @@ namespace Multi_Tool_V3
 
         private void createNewUserButton_Click(object sender, EventArgs e)
         {
-            error = ("Feature not yet implemented");
-            ErrorOccured();
+            var cu = new CreateUser();
+            cu.Show();
         }
 
         private void Login_Load(object sender, EventArgs e)
