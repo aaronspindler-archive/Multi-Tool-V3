@@ -67,28 +67,30 @@
             this.tableLayoutPanel1.Controls.Add(this.numListsRandomizedResetButton, 2, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(641, 249);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1282, 478);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // numberOfListsRandomizedLabel
             // 
             this.numberOfListsRandomizedLabel.AutoSize = true;
             this.numberOfListsRandomizedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfListsRandomizedLabel.Location = new System.Drawing.Point(3, 75);
+            this.numberOfListsRandomizedLabel.Location = new System.Drawing.Point(6, 144);
+            this.numberOfListsRandomizedLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberOfListsRandomizedLabel.Name = "numberOfListsRandomizedLabel";
-            this.numberOfListsRandomizedLabel.Size = new System.Drawing.Size(207, 25);
+            this.numberOfListsRandomizedLabel.Size = new System.Drawing.Size(415, 48);
             this.numberOfListsRandomizedLabel.TabIndex = 1;
             this.numberOfListsRandomizedLabel.Text = "Number of Lists Randomized: ";
             this.numberOfListsRandomizedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,9 +99,10 @@
             // 
             this.numberOfPasswordsCreatedDisplay.AutoSize = true;
             this.numberOfPasswordsCreatedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfPasswordsCreatedDisplay.Location = new System.Drawing.Point(216, 25);
+            this.numberOfPasswordsCreatedDisplay.Location = new System.Drawing.Point(433, 48);
+            this.numberOfPasswordsCreatedDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberOfPasswordsCreatedDisplay.Name = "numberOfPasswordsCreatedDisplay";
-            this.numberOfPasswordsCreatedDisplay.Size = new System.Drawing.Size(207, 25);
+            this.numberOfPasswordsCreatedDisplay.Size = new System.Drawing.Size(415, 48);
             this.numberOfPasswordsCreatedDisplay.TabIndex = 1;
             this.numberOfPasswordsCreatedDisplay.Text = "0";
             this.numberOfPasswordsCreatedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,9 +111,10 @@
             // 
             this.numberOfPasswordsCreatedLabel.AutoSize = true;
             this.numberOfPasswordsCreatedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfPasswordsCreatedLabel.Location = new System.Drawing.Point(3, 25);
+            this.numberOfPasswordsCreatedLabel.Location = new System.Drawing.Point(6, 48);
+            this.numberOfPasswordsCreatedLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberOfPasswordsCreatedLabel.Name = "numberOfPasswordsCreatedLabel";
-            this.numberOfPasswordsCreatedLabel.Size = new System.Drawing.Size(207, 25);
+            this.numberOfPasswordsCreatedLabel.Size = new System.Drawing.Size(415, 48);
             this.numberOfPasswordsCreatedLabel.TabIndex = 0;
             this.numberOfPasswordsCreatedLabel.Text = "Number of Passwords Created: ";
             this.numberOfPasswordsCreatedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,9 +122,10 @@
             // numberOfPasswordsResetButton
             // 
             this.numberOfPasswordsResetButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfPasswordsResetButton.Location = new System.Drawing.Point(429, 28);
+            this.numberOfPasswordsResetButton.Location = new System.Drawing.Point(860, 54);
+            this.numberOfPasswordsResetButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numberOfPasswordsResetButton.Name = "numberOfPasswordsResetButton";
-            this.numberOfPasswordsResetButton.Size = new System.Drawing.Size(209, 19);
+            this.numberOfPasswordsResetButton.Size = new System.Drawing.Size(416, 36);
             this.numberOfPasswordsResetButton.TabIndex = 2;
             this.numberOfPasswordsResetButton.Text = "Reset - Number Of Passwords Created";
             this.numberOfPasswordsResetButton.UseVisualStyleBackColor = true;
@@ -134,7 +139,8 @@
             this.refreshToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(426, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.menuStrip1.Size = new System.Drawing.Size(854, 44);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,20 +149,20 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(64, 36);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(127, 36);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(107, 36);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
@@ -165,9 +171,10 @@
             this.usernameDisplay.AutoSize = true;
             this.usernameDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.usernameDisplay.ForeColor = System.Drawing.Color.DarkRed;
-            this.usernameDisplay.Location = new System.Drawing.Point(429, 0);
+            this.usernameDisplay.Location = new System.Drawing.Point(860, 0);
+            this.usernameDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameDisplay.Name = "usernameDisplay";
-            this.usernameDisplay.Size = new System.Drawing.Size(209, 25);
+            this.usernameDisplay.Size = new System.Drawing.Size(416, 48);
             this.usernameDisplay.TabIndex = 4;
             this.usernameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -175,9 +182,10 @@
             // 
             this.numberOfDiceRolledHelpLabel.AutoSize = true;
             this.numberOfDiceRolledHelpLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfDiceRolledHelpLabel.Location = new System.Drawing.Point(3, 50);
+            this.numberOfDiceRolledHelpLabel.Location = new System.Drawing.Point(6, 96);
+            this.numberOfDiceRolledHelpLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberOfDiceRolledHelpLabel.Name = "numberOfDiceRolledHelpLabel";
-            this.numberOfDiceRolledHelpLabel.Size = new System.Drawing.Size(207, 25);
+            this.numberOfDiceRolledHelpLabel.Size = new System.Drawing.Size(415, 48);
             this.numberOfDiceRolledHelpLabel.TabIndex = 5;
             this.numberOfDiceRolledHelpLabel.Text = "Number of Dice Rolled: ";
             this.numberOfDiceRolledHelpLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,9 +194,10 @@
             // 
             this.numberOfDiceRolledDisplay.AutoSize = true;
             this.numberOfDiceRolledDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfDiceRolledDisplay.Location = new System.Drawing.Point(216, 50);
+            this.numberOfDiceRolledDisplay.Location = new System.Drawing.Point(433, 96);
+            this.numberOfDiceRolledDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numberOfDiceRolledDisplay.Name = "numberOfDiceRolledDisplay";
-            this.numberOfDiceRolledDisplay.Size = new System.Drawing.Size(207, 25);
+            this.numberOfDiceRolledDisplay.Size = new System.Drawing.Size(415, 48);
             this.numberOfDiceRolledDisplay.TabIndex = 6;
             this.numberOfDiceRolledDisplay.Text = "0";
             this.numberOfDiceRolledDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -196,9 +205,10 @@
             // numberOfDiceRolledResetButton
             // 
             this.numberOfDiceRolledResetButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numberOfDiceRolledResetButton.Location = new System.Drawing.Point(429, 53);
+            this.numberOfDiceRolledResetButton.Location = new System.Drawing.Point(860, 102);
+            this.numberOfDiceRolledResetButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numberOfDiceRolledResetButton.Name = "numberOfDiceRolledResetButton";
-            this.numberOfDiceRolledResetButton.Size = new System.Drawing.Size(209, 19);
+            this.numberOfDiceRolledResetButton.Size = new System.Drawing.Size(416, 36);
             this.numberOfDiceRolledResetButton.TabIndex = 7;
             this.numberOfDiceRolledResetButton.Text = "Reset - Number of Dice Rolled";
             this.numberOfDiceRolledResetButton.UseVisualStyleBackColor = true;
@@ -208,9 +218,10 @@
             // 
             this.numListsRandomizedDisplay.AutoSize = true;
             this.numListsRandomizedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numListsRandomizedDisplay.Location = new System.Drawing.Point(216, 75);
+            this.numListsRandomizedDisplay.Location = new System.Drawing.Point(433, 144);
+            this.numListsRandomizedDisplay.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.numListsRandomizedDisplay.Name = "numListsRandomizedDisplay";
-            this.numListsRandomizedDisplay.Size = new System.Drawing.Size(207, 25);
+            this.numListsRandomizedDisplay.Size = new System.Drawing.Size(415, 48);
             this.numListsRandomizedDisplay.TabIndex = 8;
             this.numListsRandomizedDisplay.Text = "0";
             this.numListsRandomizedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,9 +229,10 @@
             // numListsRandomizedResetButton
             // 
             this.numListsRandomizedResetButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numListsRandomizedResetButton.Location = new System.Drawing.Point(429, 78);
+            this.numListsRandomizedResetButton.Location = new System.Drawing.Point(860, 150);
+            this.numListsRandomizedResetButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numListsRandomizedResetButton.Name = "numListsRandomizedResetButton";
-            this.numListsRandomizedResetButton.Size = new System.Drawing.Size(209, 19);
+            this.numListsRandomizedResetButton.Size = new System.Drawing.Size(416, 36);
             this.numListsRandomizedResetButton.TabIndex = 9;
             this.numListsRandomizedResetButton.Text = "Reset - Number of Lists Randomized";
             this.numListsRandomizedResetButton.UseVisualStyleBackColor = true;
@@ -228,13 +240,14 @@
             // 
             // ProgramStatistics
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 249);
+            this.ClientSize = new System.Drawing.Size(1282, 478);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ProgramStatistics";
             this.Text = "Program Statistics";
             this.Load += new System.EventHandler(this.ProgramStatistics_Load);

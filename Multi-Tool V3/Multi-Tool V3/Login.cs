@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
+
 namespace Multi_Tool_V3
 {
     public partial class Login : Form
@@ -40,8 +42,8 @@ namespace Multi_Tool_V3
             if ((username == ("xNovax")) && (password == ("password")))
             {
                 var homeWindow = new Home();
-                Multi_Tool_V3.Properties.Settings.Default.username = username;
-                Multi_Tool_V3.Properties.Settings.Default.Save();
+                Settings.Default.username = username;
+                Settings.Default.Save();
                 homeWindow.Show();
                 Hide();
             }
@@ -49,10 +51,10 @@ namespace Multi_Tool_V3
             {
                 error = ("Wrong Username or Password");
                 ErrorOccured();
-                Multi_Tool_V3.Properties.Settings.Default.username = username;
+                Settings.Default.username = username;
             }
-            Multi_Tool_V3.Properties.Settings.Default.username = username;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.username = username;
+            Settings.Default.Save();
         }
 
         private void createNewUserButton_Click(object sender, EventArgs e)
@@ -81,7 +83,7 @@ namespace Multi_Tool_V3
         {
             CheckForText();
             username = usernameTextBox.Text;
-            Multi_Tool_V3.Properties.Settings.Default.username = username;
+            Settings.Default.username = username;
         }
     }
 }

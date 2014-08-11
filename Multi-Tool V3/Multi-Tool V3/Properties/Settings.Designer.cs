@@ -130,5 +130,41 @@ namespace Multi_Tool_V3.Properties {
                 this["minecraftFtpPort"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("xNovax")]
+        public string usernameStorage {
+            get {
+                return ((string)(this["usernameStorage"]));
+            }
+            set {
+                this["usernameStorage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Password")]
+        public string passwordStorage {
+            get {
+                return ((string)(this["passwordStorage"]));
+            }
+            set {
+                this["passwordStorage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int numUsers {
+            get {
+                return ((int)(this["numUsers"]));
+            }
+            set {
+                this["numUsers"] = value;
+            }
+        }
     }
 }

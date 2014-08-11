@@ -29,5 +29,14 @@
     <Setting Name="minecraftFtpPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">21</Value>
     </Setting>
+    <Setting Name="usernameStorage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xNovax</Value>
+    </Setting>
+    <Setting Name="passwordStorage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password</Value>
+    </Setting>
+    <Setting Name="numUsers" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
