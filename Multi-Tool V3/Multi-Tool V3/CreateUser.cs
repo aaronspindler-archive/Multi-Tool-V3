@@ -53,6 +53,7 @@ namespace Multi_Tool_V3
 
         private void checkAvailabilityUsernameButton_Click(object sender, EventArgs e)
         {
+
         }
 
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
