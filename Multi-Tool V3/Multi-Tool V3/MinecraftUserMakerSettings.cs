@@ -1,8 +1,7 @@
-﻿using Multi_Tool_V3.Properties;
-
-//@author xNovax
+﻿//@author xNovax
 using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 namespace Multi_Tool_V3
 {

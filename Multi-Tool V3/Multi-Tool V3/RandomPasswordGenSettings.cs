@@ -1,6 +1,6 @@
-﻿using Multi_Tool_V3.Properties;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -199,7 +199,7 @@ namespace Multi_Tool_V3
 
         private void RandomPasswordGenOptions_Load(object sender, EventArgs e)
         {
-            var username = Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
 
             switch (Settings.Default.randomPasswordSetting)

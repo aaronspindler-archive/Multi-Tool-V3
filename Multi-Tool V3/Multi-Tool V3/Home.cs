@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
+
 namespace Multi_Tool_V3
 {
     public partial class Home : Form
     {
-        private string time;
-
         //Variables
-        private UsefulCode uc = new UsefulCode();
+        private readonly UsefulCode uc = new UsefulCode();
+        private string time;
 
         public Home()
         {
@@ -18,8 +19,8 @@ namespace Multi_Tool_V3
 
         private void clearSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Multi_Tool_V3.Properties.Settings.Default.Reset();
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.Reset();
+            Settings.Default.Save();
         }
 
         private void converterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,7 +42,7 @@ namespace Multi_Tool_V3
         private void Home_Load(object sender, EventArgs e)
         {
             time = uc.GetCurrentTime();
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
             timeDisplay.Text = ("Current Time: " + time);
             timer.Tick += timer_Tick;

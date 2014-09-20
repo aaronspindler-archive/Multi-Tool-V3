@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 namespace Multi_Tool_V3
 {
@@ -17,50 +18,50 @@ namespace Multi_Tool_V3
 
         public void RefreshEverything()
         {
-            numberOfPasswordsCreatedDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated);
-            numberOfDiceRolledDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls);
-            numListsRandomizedDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfListsRandomized);
+            numberOfPasswordsCreatedDisplay.Text = Convert.ToString(Settings.Default.numberOfPasswordsCreated);
+            numberOfDiceRolledDisplay.Text = Convert.ToString(Settings.Default.numberOfDiceRolls);
+            numListsRandomizedDisplay.Text = Convert.ToString(Settings.Default.numberOfListsRandomized);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void numberOfDiceRolledResetButton_Click(object sender, EventArgs e)
         {
             numberOfDiceRolledDisplay.Text = ("0");
-            Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls = 0;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.numberOfDiceRolls = 0;
+            Settings.Default.Save();
             RefreshEverything();
         }
 
         private void numberOfPasswordsResetButton_Click(object sender, EventArgs e)
         {
             numberOfPasswordsCreatedDisplay.Text = ("0");
-            Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated = 0;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.numberOfPasswordsCreated = 0;
+            Settings.Default.Save();
             RefreshEverything();
         }
 
         private void numListsRandomizedResetButton_Click(object sender, EventArgs e)
         {
             numListsRandomizedDisplay.Text = ("0");
-            Multi_Tool_V3.Properties.Settings.Default.numberOfListsRandomized = 0;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.numberOfListsRandomized = 0;
+            Settings.Default.Save();
             RefreshEverything();
         }
 
         private void ProgramStatistics_Load(object sender, EventArgs e)
         {
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
 
-            numberOfPasswordsCreatedDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated);
+            numberOfPasswordsCreatedDisplay.Text = Convert.ToString(Settings.Default.numberOfPasswordsCreated);
 
-            numberOfDiceRolledDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls);
+            numberOfDiceRolledDisplay.Text = Convert.ToString(Settings.Default.numberOfDiceRolls);
 
-            numListsRandomizedDisplay.Text = Convert.ToString(Multi_Tool_V3.Properties.Settings.Default.numberOfListsRandomized);
+            numListsRandomizedDisplay.Text = Convert.ToString(Settings.Default.numberOfListsRandomized);
         }
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)

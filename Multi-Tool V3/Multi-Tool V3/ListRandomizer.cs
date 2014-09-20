@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
+
 namespace Multi_Tool_V3
 {
     public partial class ListRandomizer : Form
     {
-        private Random gen = new Random();
+        private readonly Random gen = new Random();
 
         //Variables
+
+        private readonly List<string> originalList = new List<string>();
+
+        private readonly List<string> randomList = new List<string>();
         private string itemToAdd = ("");
 
-        private int numItemsInList = 0;
+        private int numItemsInList;
 
-        private List<string> originalList = new List<string>();
-
-        private List<string> randomList = new List<string>();
-
-        private int randomNumber = 0;
+        private int randomNumber;
 
         public ListRandomizer()
         {
@@ -60,7 +62,7 @@ namespace Multi_Tool_V3
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void itemAdditionTextBox_MouseClick(object sender, MouseEventArgs e)
@@ -78,7 +80,7 @@ namespace Multi_Tool_V3
 
         private void ListRandomizer_Load(object sender, EventArgs e)
         {
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
             clearListButton.Enabled = false;
             randomizeListButton.Enabled = false;
@@ -99,9 +101,9 @@ namespace Multi_Tool_V3
             }
 
             if (randomList != null) randomizedListBox.Items.AddRange(randomList.ToArray());
-            Properties.Settings.Default.numberOfListsRandomized =
-            Properties.Settings.Default.numberOfListsRandomized + 1;
-            Properties.Settings.Default.Save();
+            Settings.Default.numberOfListsRandomized =
+                Settings.Default.numberOfListsRandomized + 1;
+            Settings.Default.Save();
         }
     }
 }

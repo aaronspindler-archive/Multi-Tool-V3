@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 namespace Multi_Tool_V3
 {
@@ -14,7 +15,7 @@ namespace Multi_Tool_V3
 
         public string GetCurrentTime()
         {
-            var time = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
+            string time = DateTime.Now.ToString("hh:mm:ss tt", DateTimeFormatInfo.InvariantInfo);
             return time;
         }
 
@@ -28,15 +29,32 @@ namespace Multi_Tool_V3
             //4 - All Characters (Numbers, Letters, and Special Characters)
 
             //Variables
-            Random gen = new Random();
+            var gen = new Random();
             string passwordToString = ("");
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-            char[] letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-            char[] lettersAndNumbers = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
-            char[] allCharacters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?' };
-            char[] passwordArray = { };
-            List<char> passwordList = new List<char>();
-            var randomNumber = 0;
+            char[] numbers = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+            char[] letters =
+            {
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+                'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+            };
+            char[] lettersAndNumbers =
+            {
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+                'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+                'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6',
+                '7', '8', '9', '0'
+            };
+            char[] allCharacters =
+            {
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
+                'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+                'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7',
+                '8', '9', '0', '!', '@', '#', '$', '%', '^', '&', '*', '<', '>', '?'
+            };
+            char[] passwordArray = {};
+            var passwordList = new List<char>();
+            int randomNumber = 0;
 
             if (passwordType == 0)
             {
@@ -46,7 +64,7 @@ namespace Multi_Tool_V3
             {
                 if (passwordType == 1)
                 {
-                    for (var i = 0; i < passwordLength; i++)
+                    for (int i = 0; i < passwordLength; i++)
                     {
                         randomNumber = gen.Next(10);
                         passwordList.Add(numbers[randomNumber]);
@@ -57,7 +75,7 @@ namespace Multi_Tool_V3
                 {
                     if (passwordType == 2)
                     {
-                        for (var i = 0; i < passwordLength; i++)
+                        for (int i = 0; i < passwordLength; i++)
                         {
                             randomNumber = gen.Next(52);
                             passwordList.Add(letters[randomNumber]);
@@ -68,7 +86,7 @@ namespace Multi_Tool_V3
                     {
                         if (passwordType == 3)
                         {
-                            for (var i = 0; i < passwordLength; i++)
+                            for (int i = 0; i < passwordLength; i++)
                             {
                                 randomNumber = gen.Next(62);
                                 passwordList.Add(lettersAndNumbers[randomNumber]);
@@ -79,7 +97,7 @@ namespace Multi_Tool_V3
                         {
                             if (passwordType == 4)
                             {
-                                for (var i = 0; i < passwordLength; i++)
+                                for (int i = 0; i < passwordLength; i++)
                                 {
                                     randomNumber = gen.Next(73);
                                     passwordList.Add(allCharacters[randomNumber]);
@@ -90,9 +108,9 @@ namespace Multi_Tool_V3
                     }
                 }
             }
-            Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated =
-            Multi_Tool_V3.Properties.Settings.Default.numberOfPasswordsCreated + 1;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.numberOfPasswordsCreated =
+                Settings.Default.numberOfPasswordsCreated + 1;
+            Settings.Default.Save();
             return passwordToString;
         }
     }

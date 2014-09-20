@@ -1,6 +1,6 @@
-﻿using Multi_Tool_V3.Properties;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -116,7 +116,8 @@ namespace Multi_Tool_V3
                                                                 }
                                                                 else
                                                                 {
-                                                                    uc.ErrorOccured("You have selected an option that does not exist.");
+                                                                    uc.ErrorOccured(
+                                                                        "You have selected an option that does not exist.");
                                                                 }
                                                             }
                                                         }
@@ -140,7 +141,8 @@ namespace Multi_Tool_V3
 
         private void fromValueTextBox_TextChanged(object sender, EventArgs e)
         {
-            if ((fromValueTextBox.Text != ("")) || ((fromValueTextBox.Text != ("0")) || (fromValueTextBox.Text != ("0.0"))))
+            if ((fromValueTextBox.Text != ("")) ||
+                ((fromValueTextBox.Text != ("0")) || (fromValueTextBox.Text != ("0.0"))))
             {
                 fromValue = Convert.ToDouble(fromValueTextBox.Text);
             }

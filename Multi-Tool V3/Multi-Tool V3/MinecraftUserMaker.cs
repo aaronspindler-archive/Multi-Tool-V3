@@ -1,17 +1,19 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
+
 namespace Multi_Tool_V3
 {
     public partial class MinecraftUserMaker : Form
     {
+        private readonly UsefulCode uc = new UsefulCode();
         private string controlPanelPort = ("");
-        private Boolean customPassUsed = false;
+        private Boolean customPassUsed;
         private string customPassword = ("");
         private string mcServerPort = ("");
-        private UsefulCode uc = new UsefulCode();
         private string username = ("");
 
         public MinecraftUserMaker()
@@ -21,7 +23,7 @@ namespace Multi_Tool_V3
 
         public string WhichPassword()
         {
-            var passwordToPrint = ("");
+            string passwordToPrint = ("");
 
             switch (customPassUsed)
             {
@@ -30,7 +32,8 @@ namespace Multi_Tool_V3
                     break;
 
                 case false:
-                    passwordToPrint = uc.MakeRandomPassword(Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordType, Multi_Tool_V3.Properties.Settings.Default.minecraftPasswordLength);
+                    passwordToPrint = uc.MakeRandomPassword(Settings.Default.minecraftPasswordType,
+                        Settings.Default.minecraftPasswordLength);
                     break;
             }
             return passwordToPrint;
@@ -64,15 +67,18 @@ namespace Multi_Tool_V3
                     writer.WriteLine("Time Created: " + uc.GetCurrentTime());
                     writer.WriteLine("=================================================");
                     writer.WriteLine("Minecraft Server Information");
-                    writer.WriteLine("Minecraft Server IP: " + Multi_Tool_V3.Properties.Settings.Default.minecraftUserMakerRootIP + ":" + mcServerPort);
+                    writer.WriteLine("Minecraft Server IP: " + Settings.Default.minecraftUserMakerRootIP + ":" +
+                                     mcServerPort);
                     writer.WriteLine("=================================================");
                     writer.WriteLine("Control Panel Information");
-                    writer.WriteLine("Control Panel IP: " + Multi_Tool_V3.Properties.Settings.Default.minecraftUserMakerRootIP + ":" + controlPanelPort);
+                    writer.WriteLine("Control Panel IP: " + Settings.Default.minecraftUserMakerRootIP + ":" +
+                                     controlPanelPort);
                     writer.WriteLine("Control Panel Username: " + username);
                     writer.WriteLine("Control Panel Password: " + WhichPassword());
                     writer.WriteLine("=================================================");
                     writer.WriteLine("FTP Information");
-                    writer.WriteLine("FTP IP: " + Multi_Tool_V3.Properties.Settings.Default.minecraftUserMakerRootIP + ":" + Multi_Tool_V3.Properties.Settings.Default.minecraftFtpPort);
+                    writer.WriteLine("FTP IP: " + Settings.Default.minecraftUserMakerRootIP + ":" +
+                                     Settings.Default.minecraftFtpPort);
                     writer.WriteLine("FTP Username: " + username);
                     writer.WriteLine("FTP Password: " + WhichPassword());
                     writer.WriteLine("=================================================");
@@ -116,7 +122,7 @@ namespace Multi_Tool_V3
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void mcServerPortTextBox_MouseClick(object sender, MouseEventArgs e)
@@ -134,7 +140,7 @@ namespace Multi_Tool_V3
 
         private void MinecraftUserMaker_Load(object sender, EventArgs e)
         {
-            var username = Properties.Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
         }
 

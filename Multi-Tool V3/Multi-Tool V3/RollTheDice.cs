@@ -1,6 +1,6 @@
-﻿using Multi_Tool_V3.Properties;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -42,14 +42,14 @@ namespace Multi_Tool_V3
             difference = endingNumber - startingNumber;
             rolledNumber = gen.Next(difference) + startingNumber;
             randomNumberLabel.Text = Convert.ToString(rolledNumber);
-            Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls =
-            Multi_Tool_V3.Properties.Settings.Default.numberOfDiceRolls + 1;
-            Multi_Tool_V3.Properties.Settings.Default.Save();
+            Settings.Default.numberOfDiceRolls =
+                Settings.Default.numberOfDiceRolls + 1;
+            Settings.Default.Save();
         }
 
         private void RollTheDice_Load(object sender, EventArgs e)
         {
-            var username = Settings.Default.username;
+            string username = Settings.Default.username;
             usernameDisplay.Text = ("Logged in as: " + username);
         }
 

@@ -1,7 +1,7 @@
-﻿using Multi_Tool_V3.Properties;
-using System;
+﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -34,7 +34,8 @@ namespace Multi_Tool_V3
             'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'
         };
 
-        private readonly char[] numberPasswordArray = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+        private readonly char[] numberPasswordArray = {'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+        private readonly UsefulCode uc = new UsefulCode();
 
         //Variables
 
@@ -42,8 +43,6 @@ namespace Multi_Tool_V3
         private long numPasswords = 1;
         private int passwordType = 4;
         private int randomNumber;
-
-        private UsefulCode uc = new UsefulCode();
 
         public RandomPasswordGen()
         {
@@ -147,7 +146,8 @@ namespace Multi_Tool_V3
                                         if (passwordType == 0)
                                         {
                                             outputWindow.Text = ("Please select a password type in the menus above.");
-                                            uc.ErrorOccured("Please select a password option in the Options -> Password Type Menu");
+                                            uc.ErrorOccured(
+                                                "Please select a password option in the Options -> Password Type Menu");
                                         }
                                     }
                                 }
