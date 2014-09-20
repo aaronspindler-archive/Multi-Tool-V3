@@ -27,34 +27,6 @@ namespace Multi_Tool_V3
             InitializeComponent();
         }
 
-        public void UpdateButtons()
-        {
-            if (rockGlobal)
-            {
-                rockButton.ForeColor = Color.Green;
-                paperButton.ForeColor = Color.Red;
-                scissorsButton.ForeColor = Color.Red;
-            }
-            else
-            {
-                if (paperGlobal)
-                {
-                    rockButton.ForeColor = Color.Red;
-                    paperButton.ForeColor = Color.Green;
-                    scissorsButton.ForeColor = Color.Red;
-                }
-                else
-                {
-                    if (scissorsGlobal)
-                    {
-                        rockButton.ForeColor = Color.Red;
-                        paperButton.ForeColor = Color.Red;
-                        scissorsButton.ForeColor = Color.Green;
-                    }
-                }
-            }
-        }
-
         public void RobotChoose()
         {
             int randomNumber = gen.Next(3);
@@ -80,6 +52,34 @@ namespace Multi_Tool_V3
                     scissorsRobot = true;
                     robotsChoiceDisplay.Text = ("Bot: Scissors");
                     break;
+            }
+        }
+
+        public void UpdateButtons()
+        {
+            if (rockGlobal)
+            {
+                rockButton.ForeColor = Color.Green;
+                paperButton.ForeColor = Color.Red;
+                scissorsButton.ForeColor = Color.Red;
+            }
+            else
+            {
+                if (paperGlobal)
+                {
+                    rockButton.ForeColor = Color.Red;
+                    paperButton.ForeColor = Color.Green;
+                    scissorsButton.ForeColor = Color.Red;
+                }
+                else
+                {
+                    if (scissorsGlobal)
+                    {
+                        rockButton.ForeColor = Color.Red;
+                        paperButton.ForeColor = Color.Red;
+                        scissorsButton.ForeColor = Color.Green;
+                    }
+                }
             }
         }
 
@@ -188,10 +188,14 @@ namespace Multi_Tool_V3
             Close();
         }
 
-        private void RockPaperScissors_Load(object sender, EventArgs e)
+        private void paperButton_Click(object sender, EventArgs e)
         {
-            string username = Settings.Default.username;
-            usernameDisplay.Text = ("Logged in as: " + username);
+            rockGlobal = false;
+            paperGlobal = true;
+            scissorsGlobal = false;
+            UpdateButtons();
+            RobotChoose();
+            WhoWon();
         }
 
         private void rockButton_Click(object sender, EventArgs e)
@@ -204,14 +208,10 @@ namespace Multi_Tool_V3
             WhoWon();
         }
 
-        private void paperButton_Click(object sender, EventArgs e)
+        private void RockPaperScissors_Load(object sender, EventArgs e)
         {
-            rockGlobal = false;
-            paperGlobal = true;
-            scissorsGlobal = false;
-            UpdateButtons();
-            RobotChoose();
-            WhoWon();
+            string username = Settings.Default.username;
+            usernameDisplay.Text = ("Logged in as: " + username);
         }
 
         private void scissorsButton_Click(object sender, EventArgs e)

@@ -54,6 +54,12 @@ namespace Multi_Tool_V3
             info.Show();
         }
 
+        private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var li = new License();
+            li.Show();
+        }
+
         private void listRandomizerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var lr = new ListRandomizer();
@@ -94,12 +100,6 @@ namespace Multi_Tool_V3
         {
             time = uc.GetCurrentTime();
             timeDisplay.Text = ("Current Time: " + time);
-        }
-
-        private void licenseInformationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var li = new License();
-            li.Show();
         }
     }
 }

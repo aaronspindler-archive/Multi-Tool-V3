@@ -8,12 +8,13 @@ namespace Multi_Tool_V3
 {
     public partial class MinecraftUserMakerSettings : Form
     {
+        private string ftpPort = ("8821");
+
         //Variables
         private int passwordLength = 8;
 
         private int passwordType;
         private string rootServerIP = ("192.168.1.1");
-        private string ftpPort = ("8821");
 
         public MinecraftUserMakerSettings()
         {
@@ -32,6 +33,19 @@ namespace Multi_Tool_V3
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ftpPortTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            ftpPortTextBox.Text = ("");
+        }
+
+        private void ftpPortTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (ftpPortTextBox.Text != (""))
+            {
+                ftpPort = ftpPortTextBox.Text;
+            }
         }
 
         private void MinecraftUserMakerSettings_FormClosing(object sender, FormClosingEventArgs e)
@@ -115,19 +129,6 @@ namespace Multi_Tool_V3
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveSettings();
-        }
-
-        private void ftpPortTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            ftpPortTextBox.Text = ("");
-        }
-
-        private void ftpPortTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (ftpPortTextBox.Text != (""))
-            {
-                ftpPort = ftpPortTextBox.Text;
-            }
         }
     }
 }

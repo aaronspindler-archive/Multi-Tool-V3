@@ -17,11 +17,6 @@ namespace Multi_Tool_V3
             InitializeComponent();
         }
 
-        private void CreateUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void checkPasswords()
         {
             if (pass1 == pass2)
@@ -41,41 +36,26 @@ namespace Multi_Tool_V3
             }
         }
 
+        private void checkAvailabilityUsernameButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CreateUser_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void createUserButton_Click(object sender, EventArgs e)
+        {
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            usernameTextBox.Text = ("");
-        }
-
-        private void checkAvailabilityUsernameButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (usernameTextBox.Text != (""))
-            {
-                inputUsername = usernameTextBox.Text;
-            }
-        }
-
         private void password1TextBox_MouseClick(object sender, MouseEventArgs e)
         {
             password1TextBox.Text = ("");
-        }
-
-        private void password2TextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            password2TextBox.Text = ("");
-        }
-
-        private void createUserButton_Click(object sender, EventArgs e)
-        {
         }
 
         private void password1TextBox_TextChanged(object sender, EventArgs e)
@@ -84,10 +64,28 @@ namespace Multi_Tool_V3
             checkPasswords();
         }
 
+        private void password2TextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            password2TextBox.Text = ("");
+        }
+
         private void password2TextBox_TextChanged(object sender, EventArgs e)
         {
             pass2 = password2TextBox.Text;
             checkPasswords();
+        }
+
+        private void usernameTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            usernameTextBox.Text = ("");
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (usernameTextBox.Text != (""))
+            {
+                inputUsername = usernameTextBox.Text;
+            }
         }
     }
 }

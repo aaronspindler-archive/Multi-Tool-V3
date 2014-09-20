@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Multi_Tool_V3.Properties;
+using System;
 using System.Windows.Forms;
-using Multi_Tool_V3.Properties;
 
 //@author xNovax
 

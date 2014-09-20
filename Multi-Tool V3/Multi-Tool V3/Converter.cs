@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Multi_Tool_V3.Properties;
+using System;
 using System.Windows.Forms;
-using Multi_Tool_V3.Properties;
 
 //@author xNovax
 
@@ -16,6 +16,17 @@ namespace Multi_Tool_V3
         public Converter()
         {
             InitializeComponent();
+        }
+
+        private void Converter_Load(object sender, EventArgs e)
+        {
+            string username = Settings.Default.username;
+            usernameDisplay.Text = ("Logged in as: " + username);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void fromComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -119,6 +130,19 @@ namespace Multi_Tool_V3
                         }
                     }
                 }
+            }
+        }
+
+        private void fromValueTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            fromValueTextBox.Text = ("");
+        }
+
+        private void fromValueTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if ((fromValueTextBox.Text != ("")) || ((fromValueTextBox.Text != ("0")) || (fromValueTextBox.Text != ("0.0"))))
+            {
+                fromValue = Convert.ToDouble(fromValueTextBox.Text);
             }
         }
 
@@ -314,30 +338,6 @@ namespace Multi_Tool_V3
                     }
                 }
             }
-        }
-
-        private void Converter_Load(object sender, EventArgs e)
-        {
-            string username = Settings.Default.username;
-            usernameDisplay.Text = ("Logged in as: " + username);
-        }
-
-        private void fromValueTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if ((fromValueTextBox.Text != (""))||((fromValueTextBox.Text != ("0"))||(fromValueTextBox.Text != ("0.0"))))
-            {
-                fromValue = Convert.ToDouble(fromValueTextBox.Text);
-            }
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void fromValueTextBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            fromValueTextBox.Text = ("");
         }
     }
 }
